@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file if you have one -->
     <title>An Interactive Story</title>
 </head>
 <body>
@@ -18,6 +19,10 @@
 
     </div>
 
+    <div id="image-container">
+        <img id="story-image" src="" alt="Story Image" style="width: 300px; height: 300px; display: none;">
+    </div>
+
     <div id="buttons">
 
     </div>
@@ -25,8 +30,9 @@
     <script>
     
         let storyContainer = document.getElementById("story");
-    
         let buttonContainer = document.getElementById("buttons");
+        let imageContainer = document.getElementById("image-container");
+        let storyImage = document.getElementById("story-image");
 
         let history = ["intro"];
 
@@ -34,18 +40,20 @@
             intro : {
                 text : "Where do you go?",
                 choices : [
-                    ["Barb", "page1"],
-                    ["Gym", "page2"],
-                    ["Costco", "page3"]
-                ]
+                    ["Barb", "barb1"],
+                    ["Gym", "gym1"],
+                    ["Costco", "cost1"]
+                ],
+                image : "story.jpg" // Set image related to this page
             },
-            page1 : {
+            barb1 : {
                 text : "You decide to go to the barbershop, which hair cut do you get?",
                 choices : [
-                    ["Low Taper Fade", "page2t"],
+                    ["Low Taper Fade", "barb2"],
                     ["Bald", "page3t"],
                     ["Dreads", "page4t"]
-                ]
+                ],
+                image : "barber.jpg" // Set image related to this page
             },
             page2 : {
                 text : "You decide to go to the gym, what do you do?",
@@ -53,37 +61,43 @@
                     ["Go to page 3", "page3"],
                     ["Go to page 4", "page4"],
                     ["Go to page 5", "page5"]
-                ]
+                ],
+                image : "gym.png" // Set image related to this page
             },
             page3 : {
                 text : "You decide to go to Costco, what do you buy?",
                 choices : [
                     ["Go to page 4", "page4"],
                     ["Go to page 5", "page5"]
-                ]
+                ],
+                image : "costco.jpg" // Set image related to this page
             },
-            page2t : {
+            barb2 : {
                 text : "YOU GO TO JAIL",
                 choices : [
-                    ["Go to page 5", "page5"]
-                ]
+                    ["awww shucks", "end1"]
+                ],
+                image : "jail.jpg" // Set image related to this page
             },
             
             page3t : {
-                text : "You get divroced",
+                text : "You get divorced",
                 choices : [
                     ["Go to page 6", "page6"]
-                ]
+                ],
+                image : "divorce.jpg" // Set image related to this page
             },
-            page5 : {
+            end1 : {
                 text : "The end!",
                 choices : [
-                    ["", ""]
-                ]
+                    ["gg", ""]
+                ],
+                image : "end.jpg" // Set image related to this page
             },
             page4t : {
-                text : "You go to costco",
-                choices : []
+                text : "You go to Costco",
+                choices : [],
+                image : "costco-trip.jpg" // Set image related to this page
             }
         }
 
@@ -100,24 +114,21 @@
             });
         }
 
-
         function buildStory(text) {
             let storyItem = document.createElement("p");
 
             storyItem.innerText = text;
 
             storyContainer.appendChild(storyItem);
-
         }
 
         function showStory(){
-
             let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
 
             storyContainer.innerHTML = ""; // reset html
             buttonContainer.innerHTML = ""; // reset buttons
+            imageContainer.style.display = "none"; // hide image container when story is reset
             
-
             for(let page of history){ // build story text from items in history array
                 buildStory(story[page].text);
             }
@@ -125,12 +136,16 @@
             for(let choice of story[currentPage].choices){ // build buttons from choices property of most recent story choice
                 makeButton(choice[0], choice[1])
             }
+
+            // Display image based on current page if available
+            if(story[currentPage].image) {
+                storyImage.src = story[currentPage].image;
+                storyImage.style.display = "block"; // show the image
+                imageContainer.style.display = "block"; // ensure image container is shown
+            }
         }
 
         showStory();
-        
-
-
     </script>
       
 </body>

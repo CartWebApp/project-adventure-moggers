@@ -1,0 +1,29 @@
+h1{
+    color: blue; /* Change the color of h1 elements to blue */
+    font-size: 2em; /* Set the font size of h1 elements to 2em */
+    text-align: center; /* Center-align the text of h1 elements */
+}
+
+h2, p, #buttons{
+    text-align: center;
+}
+
+h2{
+    color:red
+}
+
+#story-image{
+    margin-left:43%;
+    margin-bottom: 10px;
+}
+
+p:only-of-type{
+    text-decoration: underline; /* Underline the last <p> element */
+}
+p:nth-last-of-type(3){
+   font-weight: bold; /* Make the 3rd to last <p> element thicker */
+}
+
+p:nth-last-of-type(4){
+    font-style: italic; /* Italicize the 4th to last <p> element */
+}
