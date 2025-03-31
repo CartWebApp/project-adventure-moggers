@@ -55,50 +55,68 @@
                 ],
                 image : "barber.jpg" // Set image related to this page
             },
-            page2 : {
-                text : "You decide to go to the gym, what do you do?",
-                choices : [
-                    ["Go to page 3", "page3"],
-                    ["Go to page 4", "page4"],
-                    ["Go to page 5", "page5"]
-                ],
-                image : "gym.png" // Set image related to this page
-            },
-            page3 : {
-                text : "You decide to go to Costco, what do you buy?",
-                choices : [
-                    ["Go to page 4", "page4"],
-                    ["Go to page 5", "page5"]
-                ],
-                image : "costco.jpg" // Set image related to this page
-            },
             barb2 : {
-                text : "YOU GO TO JAIL",
+                text : "YOU GO TO JAIL. Who do you accosiate with?",
                 choices : [
-                    ["awww shucks", "end1"]
+                    ["Juggers", "barb3J"],
+                    ["Gamblers", "barb4"]
                 ],
                 image : "jail.jpg" // Set image related to this page
             },
-            
-            page3t : {
-                text : "You get divorced",
+            barb3J : {
+                text : "You Join the Juggers. What do you do now?",
                 choices : [
-                    ["Go to page 6", "page6"]
+                    ["Mog thier leader", "barbj1"],
+                    ["Assimilate", "barbj2"]
                 ],
-                image : "divorce.jpg" // Set image related to this page
+                image : "image_3.jpg" // Set image related to this page
+            },
+            barbj1 : {
+                text : "you DIE! HAHAHHA",
+                choices : [
+                    ["gg", "end1"]
+                ],
+                image : "ultrakill-death.gif" // Set image related to this page
+            },
+            barbj2 : {
+                text : "You decide to assimliate. They agree to take you in. but they have a challenge for you. You must gamble youre lungs. Call it.",
+                choices : [
+                    ["Heads", "barbh"],
+                    ["Tails", "barbh"]
+                ],
+                image : "figure.jpg" // Set image related to this page
+            },
+            barbh : {
+                text : "You win! Now you have 134 pairs of lungs! and now that you are the sole member of the rival gang, the Juggers, they are going to kill you! What do you do?",
+                choices : [
+                    ["Fight them all", "barbf"],
+                    ["Try to escape", "barbe"]
+                ],
+                image : "scared.jpg" // Set image related to this page
+            },
+            barbe : {
+                text : "You manage to evade all the members of the juggers and escape the prison on the brawl that ensued. You hitchhike back to the city",
+                choices : [
+                    ["", ""],
+                    ["", ""]
+                ],
+                image : "phew.jpg"// Set image related to this page
+            },
+            barbf : {
+                text : "You manage to evade all the members of the juggers and escape the prison on the brawl that ensued. You hitchhike back to the city",
+                choices : [
+                    ["", ""],
+                    ["", ""]
+                ],
+                image : "phew.jpg" // Set image related to this page
             },
             end1 : {
                 text : "The end!",
                 choices : [
-                    ["gg", ""]
+                    ["", ""]
                 ],
                 image : "end.jpg" // Set image related to this page
             },
-            page4t : {
-                text : "You go to Costco",
-                choices : [],
-                image : "costco-trip.jpg" // Set image related to this page
-            }
         }
 
         function makeButton(btnText, choice){
