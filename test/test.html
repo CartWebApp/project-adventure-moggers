@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Time Event - Letter Press</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Quick Time Event - Press the Letters!</h1>
+        <div id="letter-display">Press: </div>
+        <div id="timer">Time: 10s</div>
+        <div id="status">Press the right letter to begin!</div>
+        <div id="score">Score: 0</div>
+        <div id="fail-message" class="hidden">YOU DIED</div>
+        <div id="win-message" class="hidden">You Won!</div> <!-- New "You Won" message -->
+        <div id="win-image" class="hidden"></div> <!-- Image for the "You Won" screen -->
+    </div>
+    <!-- Failure sound -->
+    <audio id="failure-sound" src="elden-ring-death-sound-made-with-Voicemod.mp3" preload="auto"></audio>
+    <!-- Victory sound -->
+    <audio id="victory-sound" src="hooray-made-with-Voicemod.mp3" preload="auto"></audio> <!-- Add your victory sound here -->
+
+    <script src="test.js"></script>
+</body>
+</html>
