@@ -27,12 +27,12 @@ const story = {
         text: "You decide to go to the barbershop, which hair cut do you get?",
         choices: [
             ["Low Taper Fade", "barb2"],
-            ["Bald", "page3t"],
+            ["Bald", "bald1"],
             ["Dreads", "page4t"]
         ],
         image: "pics/barber.jpg",
-        valueRizz: 1000, // Set valueRizz here
-        valueAura: 1000 // Set valueAura here
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
     },
     barb2: {
         text: "YOU GO TO JAIL. Who do you associate with?",
@@ -41,8 +41,8 @@ const story = {
             ["Juggers", "barb4"]
         ],
         image: "pics/jail.jpg",
-        valueRizz: -200,
-        valueAura: -200
+        valueRizz: 0,
+        valueAura: 0
     },
     barb3J: {
         text: "You Join the Gamblers. What do you do now?",
@@ -103,10 +103,85 @@ const story = {
         valueRizz: 0,
         valueAura: 0
     },
+    bald1: {
+        text: "FUCK YOU!",
+        choices: [
+            ["DIE", "end1"],
+        ],
+        image: "pics/wold.jpg",
+        valueRizz: -1000,
+        valueAura: -1000
+    },
+    barb4: {
+        text: "You go to the juggers. What do you plan to do?",
+        choices: [
+            ["Assimilate", "barbjug2"],
+            ["Mog thier leader", "barbjug3"]
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    barbjug2: {
+        text: "You get rejected! You just gonna let that happen?",
+        choices: [
+            ["hell naw", "barbjug3"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    barbjug3: {
+        text: "You mog thier leader and become king jugger. What do you do first as thier leader?",
+        choices: [
+            ["Jug the prison", "prisonjug"],
+            ["Live out the rest of your days doing that you love", "end1"] //change
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    prisonjug: {
+        text: "You decide to jug the prison and all your goons start laying seige to the prison. Who is your first target?",
+        choices: [
+            ["Warden", "prisonjug1"],
+            ["Gamblers", "gangshyt"]
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    prisonjug1: {
+        text: "You attempt to take out the warden!",//qte but you fail no matter what and when you do you just escape
+        choices: [
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    gangshyt: {
+        text: "You decide take on the rival gang. You wage war on the gamblers.", //qtes 
+        choices: [
+            ["ight", "aftermath"]
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    aftermath: {
+        text: "After winning the war, you indoctrinate all the gamblers into your ranks of goons. Do you escap with sheer numbers or live out the rest of your days as top dog in this prison?", 
+        choices: [
+            ["Jug", "end1"], //change
+            ["escape", "end1"]
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
     end1: {
         text: "The end!",
         choices: [
-            ["", ""]
+            ["k", "intro"] // Option to restart the game from the beginning
         ],
         image: "pics/end.jpg",
         valueRizz: 0,
@@ -141,12 +216,33 @@ function showStory() {
     storyContainer.innerHTML = ""; // reset html
     buttonContainer.innerHTML = ""; // reset buttons
     imageContainer.style.display = "none"; // hide image container when story is reset
-    
-    for (let page of history) { // build story text from items in history array
+
+    // Check if we are at the end of the story (end1)
+    if (currentPage === "end1") {
+        // Reset the story and state for a fresh start
+        state.valueRizz = 0;
+        state.valueAura = 0;
+        history = ["intro"]; // Restart the history array
+
+        // Clear any accumulated content in storyContainer
+        storyContainer.innerHTML = "";
+        buttonContainer.innerHTML = "";
+        imageContainer.style.display = "none"; // Hide the image container as well
+
+        // Display the ending text and restart button
+        buildStory("The end! Want to play again?");
+        makeButton("k", "intro");
+
+        return; // Stop further execution of the showStory function
+    }
+
+    // Build the story text for each page in the history
+    for (let page of history) {
         buildStory(story[page].text);
     }
 
-    for (let choice of story[currentPage].choices) { // build buttons from choices property of most recent story choice
+    // Build buttons based on the current page's choices
+    for (let choice of story[currentPage].choices) {
         makeButton(choice[0], choice[1]);
     }
 
