@@ -1,7 +1,7 @@
 // QTE Game Logic (script.js)
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''); 
 const totalRounds = 15;
-let currentRound = 0;
+let currentRound = 1;
 let score = 0;
 let targetLetter = '';
 let letterSequence = [];
