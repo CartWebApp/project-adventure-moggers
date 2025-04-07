@@ -1,4 +1,3 @@
-// QTE Game Logic (script.js)
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''); 
 const totalRounds = 15;
 let currentRound = 1;
@@ -12,6 +11,9 @@ let gameOver = false;  // Flag to check if game is over
 
 // Function to initialize the game in a specific container
 function createQTEGame(container) {
+    // Clear the previous content inside the container (in case the function is called again)
+    container.innerHTML = '';
+
     // Create the necessary HTML elements for the QTE game
     container.innerHTML = `
         <h1>Quick Time Event - Press the Letters!</h1>
@@ -167,6 +169,9 @@ function createQTEGame(container) {
     nextRound();
 }
 
-// Example usage: Add the QTE to any container
-// Call this function with a container (such as a div) to insert and initialize the QTE game
-createQTEGame(document.getElementById('game-container'));
+// Start the game when the "Start Game" button is clicked
+document.getElementById('start-game-btn').addEventListener('click', function() {
+    // Show the game container and start the game
+    createQTEGame(document.getElementById('game-container'));  // Insert the game into the container
+    document.getElementById('game-container').style.display = 'block';  // Show the game container
+});

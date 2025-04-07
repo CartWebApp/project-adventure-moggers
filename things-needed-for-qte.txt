@@ -1,0 +1,11 @@
+link stylesheet to page aswell
+<link rel="stylesheet" href="qte.css">
+
+place where you want the start button to be 
+<button id="start-game-btn">Start Game</button>
+
+place where you want game to appear
+<div id="game-container" style="display: none; margin-top: 20px;"></div>
+
+place at bottom of body
+<script src="qte.js"></script>
