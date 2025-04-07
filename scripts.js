@@ -24,18 +24,91 @@ const story = {
         valueAura: 0 // ValueAura for this page
     },
     barb1: {
-        text: "You decide to go to the barbershop, which hair cut do you get?",
+        text: "You decide to go to the barbershop. There you meet your lifelong buddy, Johnny Bravo.",
         choices: [
-            ["Low Taper Fade", "barb2"],
-            ["Bald", "bald1"],
-            ["Dreads", "page4t"]
+            ["Epic!!", "barb1s"],
         ],
         image: "pics/barber.jpg",
         valueRizz: 100, // Set valueRizz here
         valueAura: 100 // Set valueAura here
     },
-    barb2: {
-        text: "YOU GO TO JAIL. Who do you associate with?",
+    barb1s: {
+        text: `"Hey sport! Hows the wife?"`,
+        choices: [
+            ["She's just dandy Jack.", "barb1st"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barb1st: {
+        text: `"Glad to hear that Jim. So what can i do for ya?"`,
+        choices: [
+            ["Wifey says i need a job. I gotta get spiffy and quick! Any recomendations?", "barb1sts"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barb1sts: {
+        text: `"Do I? Hell yes i do brother. Heres what i got on the menu today fine fella. Take your pick!"`,
+        choices: [
+            ["Low Taper Fade", "barbtape"],
+            ["Bald", "barbbald"],
+            ["Dreads", "barbdreads"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbtape: {
+        text: `"Ahh the low taper fade! excellent choice! Alright, just sit there and look pretty while i work my magic."`,
+        choices: [
+            ["Yes king", "barbtape1"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbtape1: {
+        text: `After a few minutes of waiting, you get your haircut. You look like a million bucks!`,
+        choices: [
+            ["Fricken Sweet", "barbtape2"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbtape2: {
+        text: `"Fricken sweet! You look like a million bucks! Now go get em tiger!"`,
+        choices: [
+            ["le epic", "barbtape3"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbtape3: {
+        text: `You leave the barbershop filled with confidence. You are ready to take on the world! And this interview.`,
+        choices: [
+            ["RAAHHHHHH", "barbtape4"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+   
+    barbtape4: {
+        text: "You walk outside and get mistaken for wanted cirminal: Tyler ``fornie ``ninja```` Blevins and you are immediately sent to prison",
+        choices: [
+            ["bruh", "barb2w"]
+        ],
+        image: "pics/jail.jpg",
+        valueRizz: 0,
+        valueAura: 0
+    },
+    barb2w: {
+        text: "You arrive at prison. You need protection if you are to survive. Which gang do you join?",
         choices: [
             ["Gamblers", "barb3J"],
             ["Juggers", "barb4"]
@@ -154,6 +227,7 @@ const story = {
     prisonjug1: {
         text: "You attempt to take out the warden!",//qte but you fail no matter what and when you do you just escape
         choices: [
+            ["oh no", ""],
         ],
         image: "pics/.jpg",
         valueRizz: 0,
@@ -178,8 +252,80 @@ const story = {
         valueRizz: 0,
         valueAura: 0
     },
+    barbbald: {
+        text: `"Bald? Really? What ever you say boss."`,
+        choices: [
+        ["Yeah. Good boy.", "barbbald1"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald1: {
+        text: `"Dont do that"`,
+        choices: [
+        ["Uh huh", "barbbald2"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald2: {
+        text: `"Boom youre bald now. Happy?"`,
+        choices: [
+        ["Yeah!", "barbbald3"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald3: {
+        text: `"Youre cooked"`,
+        choices: [
+        ["Sybau", "barbbald4"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald4: {
+        text: `You leave the barbershop filled with confidence. You are ready to take on the world! And this interview.`,
+        choices: [
+        ["hell yeah!", "barbbald5"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald5: {
+        text: `Youre wife tried to ft. Oh no`,
+        choices: [
+        ["oh no", "barbbald6"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald6: {
+        text: `If you hang up, shell become susicous and just clal again. Theres no way out of this. You pick up`,
+        choices: [
+        ["fuck", "barbbald7"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
+    barbbald7: {
+        text: `"Im Leaving you" is all she said`,
+        choices: [
+        ["...", "end1"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
     end1: {
-        text: "The end!",
+        text: "GG!",
         choices: [
             ["k", "intro"] // Option to restart the game from the beginning
         ],
@@ -209,11 +355,10 @@ function buildStory(text) { // Builds the story text on the HTML page
 
     storyContainer.appendChild(storyItem);
 }
-
 function showStory() {
     let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
 
-    storyContainer.innerHTML = ""; // reset html
+    storyContainer.innerHTML = ""; // Clear previous story text
     buttonContainer.innerHTML = ""; // reset buttons
     imageContainer.style.display = "none"; // hide image container when story is reset
 
@@ -223,23 +368,10 @@ function showStory() {
         state.valueRizz = 0;
         state.valueAura = 0;
         history = ["intro"]; // Restart the history array
-
-        // Clear any accumulated content in storyContainer
-        storyContainer.innerHTML = "";
-        buttonContainer.innerHTML = "";
-        imageContainer.style.display = "none"; // Hide the image container as well
-
-        // Display the ending text and restart button
-        buildStory("The end! Want to play again?");
-        makeButton("k", "intro");
-
-        return; // Stop further execution of the showStory function
     }
 
-    // Build the story text for each page in the history
-    for (let page of history) {
-        buildStory(story[page].text);
-    }
+    // Display only the current page's story text
+    buildStory(story[currentPage].text);
 
     // Build buttons based on the current page's choices
     for (let choice of story[currentPage].choices) {

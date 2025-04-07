@@ -11,6 +11,12 @@
     height: 100vh;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1{
     color: blue; 
     font-size: 3em; 
@@ -27,7 +33,6 @@ h2{
 }
 
 #story-image{
-    margin-left:43%;
     margin-bottom: 10px;
 }
 
@@ -53,4 +58,21 @@ p:nth-last-of-type(1){
     border: black 2px solid;
     background-color: rgb(177, 255, 9);
     padding: 15px;
+}
+
+button {
+    margin: 10px;
+}
+
+#story{
+    font-size: 1.5em;
+    border:2px solid black;
+    margin-bottom:10px;
+    width: 50%;
+}
+.title{
+    font-size: 6em;
+    font-weight: bold;
+    color: blue;
+    transform: translate(0%, -80%);
 }
