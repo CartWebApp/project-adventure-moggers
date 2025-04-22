@@ -84,6 +84,29 @@
     opacity: 1;
 }
 
-#game-container {
-    display: none;
+#qte-game-container {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#start-game-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#start-game-button:hover {
+    background-color: #45a049;
+}
+
+#qte-display {
+    font-size: 24px;
+    margin-top: 20px;
 }
