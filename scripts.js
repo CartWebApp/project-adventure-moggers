@@ -16,8 +16,8 @@ const story = {
         text: "Where do you go?", // Story text
         choices: [
             ["Barb", "barb1"], // x = button description, y = next page
-            ["Gym", "gym1"],
-            ["Costco", "cost1"]
+            ["Gym", "Gym"],
+            ["Costco", "Costco"]
         ],
         image: "pics/story.jpg", // set image related to the event
         valueRizz: 0, // ValueRizz for this page
@@ -332,7 +332,31 @@ const story = {
         image: "pics/end.jpg",
         valueRizz: 0,
         valueAura: 0
-    }
+    },
+
+//Gym
+
+Gym: {
+    text: `"insert costco start"`,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+//Costco
+
+Costco: {
+    text: `"insert costco start"`,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
 };
 
 function makeButton(btnText, choice) { // Makes a button for the choices
