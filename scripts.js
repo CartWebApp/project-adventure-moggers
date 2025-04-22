@@ -337,9 +337,109 @@ const story = {
 //Gym
 
 Gym: {
-    text: `"insert costco start"`,
+    text: `You head to the gym, what do you want to do?`,
     choices: [
-    ["", ""],
+    ["Walk in", "Choice1"], ["Play on the monkey bars","Choice2"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice1: {
+    text: `You forgot to scan in! The guy at the front desk is furious.`,
+    choices: [
+    ["Next", "Choice3"],
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice2: {
+    text: `An old man makes fun of you and tells you that monkey bars are for kids. :(`,
+    choices: [
+    ["Next", "Choice4"],
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice3: {
+    text: `The desk man is FURIOUS!! What will you do?`,
+    choices: [
+    ["Apologize and check in", "Choice5"], ["Insult him","Choice6"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice4: {
+    text: `You are upset at the old man >:( What are you gonna do?`,
+    choices: [
+    ["Mog him", "Choice7"], ["Kill him","Choice8"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice5: {
+    text: `He accepts your apology and now you have to decide what machine you want to use for your workout.`,
+    choices: [
+    ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004","Choice10"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice6: {
+    text: `He becomes even more furious and punches you in the face`,
+    choices: [
+    ["Cry", "intro"], ["Take it like a man and scan in","Choice11"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice7: {
+    text: ``,
+    choices: [
+    ["", ""], ["",""]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice8: {
+    text: ``,
+    choices: [
+    ["", ""], ["",""]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice9: {
+    text: ``,
+    choices: [
+    ["", ""], ["",""]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice10: {
+    text: ``,
+    choices: [
+    ["", ""], ["",""]
     ],
     image: "pics/john.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -349,7 +449,7 @@ Gym: {
 //Costco
 
 Costco: {
-    text: `"insert costco start"`,
+    text: ``,
     choices: [
     ["", ""],
     ],
@@ -380,26 +480,30 @@ function buildStory(text) { // Builds the story text on the HTML page
     storyContainer.appendChild(storyItem);
 }
 function showStory() {
-    let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
+    let currentPage = history[history.length - 1]; 
 
-    storyContainer.innerHTML = ""; // Clear previous story text
+    storyContainer.innerHTML = ""; 
     buttonContainer.innerHTML = ""; // reset buttons
-    imageContainer.style.display = "none"; // hide image container when story is reset
+    imageContainer.style.display = "none"; 
 
-    // Check if we are at the end of the story (end1)
+
     if (currentPage === "end1") {
-        // Reset the story and state for a fresh start
+        // Resets the story and points
         state.valueRizz = 0;
         state.valueAura = 0;
-        history = ["intro"]; // Restart the history array
+        history = ["intro"]; // clear the history 
     }
 
-    // Display only the current page's story text
     buildStory(story[currentPage].text);
 
-    // Build buttons based on the current page's choices
-    for (let choice of story[currentPage].choices) {
-        makeButton(choice[0], choice[1]);
+    // If the current page is the one where QTE should trigger
+    if (currentPage === "gangshyt") {  // Change "gangshyt" to any page where QTE should happen
+        createQTEGame(document.getElementById("story"));  // This will display the QTE game in the story container
+    } else {
+        // Build buttons based on the current page's choices
+        for (let choice of story[currentPage].choices) {
+            makeButton(choice[0], choice[1]);
+        }
     }
 
     // Accumulate the current page's Rizz and Aura values
@@ -419,3 +523,139 @@ function showStory() {
 }
 
 showStory();
+
+//QTE
+function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
+    // The game state
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    let currentRound = 0;
+    let score = 0;
+    let targetLetter = '';
+    let letterSequence = [];
+    let timerInterval;
+    let timeLeft = timeLimit;
+    let timerStarted = false;
+    let gameOver = false;
+
+    // Elements for display
+    const letterDisplay = container.querySelector('#letter-display');
+    const statusDisplay = container.querySelector('#status');
+    const scoreDisplay = container.querySelector('#score');
+    const timerDisplay = container.querySelector('#timer');
+    const failMessage = container.querySelector('#fail-message');
+    const winMessage = container.querySelector('#win-message');
+    const winImage = container.querySelector('#win-image');
+    const failureSound = container.querySelector('#failure-sound');
+    const victorySound = container.querySelector('#victory-sound');
+
+    // Create the letter sequence
+    function generateLetterSequence() {
+        letterSequence = Array.from({ length: totalRounds }, () => letters[Math.floor(Math.random() * letters.length)]);
+    }
+
+    // Handle the start of a new round
+    function nextRound() {
+        if (currentRound < totalRounds && !gameOver) {
+            targetLetter = letterSequence[currentRound];
+            letterDisplay.textContent = `Press: ${targetLetter}`;
+            statusDisplay.textContent = `Round ${currentRound + 1} / ${totalRounds}. Press the right letter!`;
+        } else {
+            endGame();
+        }
+    }
+
+    // Start the timer
+    function startTimer() {
+        if (timerStarted) return;
+        timerStarted = true;
+        timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+            } else {
+                stopTimer();
+                playFailureSound();
+                showFailureMessage();
+            }
+        }, 1000);
+    }
+
+    // Update the timer display
+    function updateTimerDisplay() {
+        timerDisplay.textContent = `Time: ${timeLeft}s`;
+    }
+
+    // Stop the timer
+    function stopTimer() {
+        clearInterval(timerInterval);
+    }
+
+    // Show failure message
+    function showFailureMessage() {
+        failMessage.classList.add('visible');
+        statusDisplay.textContent = 'You Failed! Time ran out.';
+    }
+
+    // Play failure sound
+    function playFailureSound() {
+        failureSound.play();
+    }
+
+    // Show win message
+    function showWinMessage() {
+        winMessage.classList.add('visible');
+        winImage.classList.add('visible');
+        statusDisplay.textContent = 'You Won! All letters pressed correctly!';
+        playVictorySound();
+    }
+
+    // Play victory sound
+    function playVictorySound() {
+        victorySound.play();
+    }
+
+    // End the game
+    function endGame() {
+        gameOver = true;
+        stopTimer();
+        statusDisplay.textContent = `Game Over! You scored: ${score}`;
+        letterDisplay.textContent = '';
+    }
+
+    // Handle correct key press
+    function handleCorrectKeyPress() {
+        score++;
+        scoreDisplay.textContent = 'Score: ' + score;
+        currentRound++;
+        if (currentRound < totalRounds) {
+            nextRound();
+        } else {
+            showWinMessage();
+            stopTimer();
+        }
+    }
+
+    // Handle wrong key press
+    function handleWrongKeyPress() {
+        gameOver = true;
+        playFailureSound();
+        showFailureMessage();
+        stopTimer();
+    }
+
+    // Keydown event listener to check key press
+    document.addEventListener('keydown', (event) => {
+        if (gameOver) return;
+        if (!timerStarted) startTimer();
+
+        if (event.key.toUpperCase() === targetLetter) {
+            handleCorrectKeyPress();
+        } else {
+            handleWrongKeyPress();
+        }
+    });
+
+    // Initialize the game
+    generateLetterSequence();
+    nextRound();
+}

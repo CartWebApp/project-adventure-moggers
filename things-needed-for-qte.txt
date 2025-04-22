@@ -1,11 +1,24 @@
-link stylesheet to page aswell
-<link rel="stylesheet" href="qte.css">
+Example of how to call it -
 
-place where you want the start button to be 
-<button id="start-game-btn">Start Game</button>
+const gameContainer1 = document.getElementById('qte-game-container-1');
+const gameContainer2 = document.getElementById('qte-game-container-2');
+createQTEGame(gameContainer1, 10, 15);  // First game
+createQTEGame(gameContainer2, 20, 5);   // Second game with different settings
 
-place where you want game to appear
-<div id="game-container" style="display: none; margin-top: 20px;"></div>
 
-place at bottom of body
-<script src="qte.js"></script>
+Hosts game content -
+
+<div id="qte-game-container">
+    <h1>Quick Time Event - Press the Letters!</h1>
+    <div id="letter-display">Press: </div>
+    <div id="timer">Time: 10s</div>
+    <div id="status">Press the right letter to begin!</div>
+    <div id="score">Score: 0</div>
+    <div id="fail-message" class="hidden">YOU DIED</div>
+    <div id="win-message" class="hidden">You Won!</div>
+    <div id="win-image" class="hidden"></div>
+
+    <!-- Sounds -->
+    <audio id="failure-sound" src="elden-ring-death-sound-made-with-Voicemod.mp3" preload="auto"></audio>
+    <audio id="victory-sound" src="hooray-made-with-Voicemod.mp3" preload="auto"></audio>
+</div>
