@@ -1,82 +1,15 @@
-.cool {
+/* Styling for the body */
+body {
     font-family: Arial, sans-serif;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1{
-    color: blue; 
-    font-size: 3em; 
-    text-align: center; 
     margin: 0;
+    background-color: #f4f4f4;
 }
 
-h2, p, #buttons{
-    text-align: center;
-}
-
-h2{
-    color:red;
-}
-
-#story-image{
-    margin-bottom: 10px;
-}
-
-p:nth-last-of-type(1){
-   font-weight: bold; /* Makes the latest story event bold */
-}
-
-.unda {
-    font-size: 0.60em;
-}
-
-.coolar {
-    color: black;
-    background-color: none;
-    border-color: none;
-    text-decoration: none;
-    padding: 15px 35px;
-}
-
-.butt-styling {
-    font-size: 1.5em;
-    border-radius: 10px;
-    border: black 2px solid;
-    background-color: rgb(177, 255, 9);
-    padding: 15px;
-}
-
-button {
-    margin: 10px;
-}
-
-#story{
-    font-size: 1.5em;
-    border:2px solid black;
-    margin-bottom:10px;
-    width: 50%;
-}
-.title{
-    font-size: 6em;
-    font-weight: bold;
-    color: blue;
-    transform: translate(0%, -80%);
-}
-
+/* Game Box Styling */
 #qte-box {
     display: none; /* Initially hidden */
     text-align: center;

@@ -690,7 +690,9 @@ showStory();
 
 //QTE
 function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
-    // The game state
+    // Clear anything previously in container
+    container.innerHTML = '';
+
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     let currentRound = 0;
     let score = 0;
@@ -701,34 +703,47 @@ function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
     let timerStarted = false;
     let gameOver = false;
 
-    // Elements for display
-    const letterDisplay = container.querySelector('#letter-display');
-    const statusDisplay = container.querySelector('#status');
-    const scoreDisplay = container.querySelector('#score');
-    const timerDisplay = container.querySelector('#timer');
-    const failMessage = container.querySelector('#fail-message');
-    const winMessage = container.querySelector('#win-message');
-    const winImage = container.querySelector('#win-image');
-    const failureSound = container.querySelector('#failure-sound');
-    const victorySound = container.querySelector('#victory-sound');
+    // DOM Elements (created dynamically)
+    const qteBox = document.createElement('div');
+    const letterDisplay = document.createElement('h2');
+    const statusDisplay = document.createElement('p');
+    const scoreDisplay = document.createElement('p');
+    const timerDisplay = document.createElement('p');
+    const failMessage = document.createElement('div');
+    const winMessage = document.createElement('div');
+    const winImage = document.createElement('img');
 
-    // Create the letter sequence
+    qteBox.id = 'qte-box';
+    failMessage.id = 'fail-message';
+    winMessage.id = 'win-message';
+    winImage.id = 'win-image';
+    winImage.src = 'https://via.placeholder.com/150'; // Example win image
+
+    failMessage.textContent = "❌ You failed!";
+    winMessage.textContent = "✅ You won!";
+    failMessage.style.display = 'none';
+    winMessage.style.display = 'none';
+    winImage.style.display = 'none';
+
+    // Append elements to container
+    container.appendChild(qteBox); // Append the game box
+    qteBox.append(letterDisplay, statusDisplay, scoreDisplay, timerDisplay, failMessage, winMessage, winImage);
+
+    // Generate random letters
     function generateLetterSequence() {
         letterSequence = Array.from({ length: totalRounds }, () => letters[Math.floor(Math.random() * letters.length)]);
     }
 
-    // Handle the start of a new round
     function nextRound() {
         if (currentRound < totalRounds && !gameOver) {
             targetLetter = letterSequence[currentRound];
             letterDisplay.textContent = `Press: ${targetLetter}`;
-            statusDisplay.textContent = `Round ${currentRound + 1} / ${totalRounds}. Press the right letter!`;
+            statusDisplay.textContent = `Round ${currentRound + 1} / ${totalRounds}`;
         } else {
             endGame();
         }
     }
 
-    // Start the timer
     function startTimer() {
         if (timerStarted) return;
         timerStarted = true;
@@ -738,76 +753,62 @@ function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
                 updateTimerDisplay();
             } else {
                 stopTimer();
-                playFailureSound();
-                showFailureMessage();
+                handleFailure();
             }
         }, 1000);
     }
 
-    // Update the timer display
     function updateTimerDisplay() {
-        timerDisplay.textContent = `Time: ${timeLeft}s`;
+        timerDisplay.textContent = `⏱ Time left: ${timeLeft}s`;
     }
 
-    // Stop the timer
     function stopTimer() {
         clearInterval(timerInterval);
     }
 
-    // Show failure message
-    function showFailureMessage() {
-        failMessage.classList.add('visible');
-        statusDisplay.textContent = 'You Failed! Time ran out.';
+    function handleFailure() {
+        failMessage.style.display = 'block';
+        gameOver = true;
+        playSound('fail'); // Play failure sound
     }
 
-    // Play failure sound
-    function playFailureSound() {
-        failureSound.play();
+    function handleVictory() {
+        winMessage.style.display = 'block';
+        winImage.style.display = 'block';
+        playSound('win'); // Play win sound
     }
 
-    // Show win message
-    function showWinMessage() {
-        winMessage.classList.add('visible');
-        winImage.classList.add('visible');
-        statusDisplay.textContent = 'You Won! All letters pressed correctly!';
-        playVictorySound();
+    function playSound(result) {
+        const sound = new Audio(result === 'win' ? 'https://www.soundjay.com/button/beep-07.wav' : 'https://www.soundjay.com/button/beep-05.wav');
+        sound.play();
     }
 
-    // Play victory sound
-    function playVictorySound() {
-        victorySound.play();
-    }
-
-    // End the game
     function endGame() {
         gameOver = true;
         stopTimer();
-        statusDisplay.textContent = `Game Over! You scored: ${score}`;
         letterDisplay.textContent = '';
+        statusDisplay.textContent = `Game Over! Score: ${score}`;
     }
 
-    // Handle correct key press
     function handleCorrectKeyPress() {
         score++;
-        scoreDisplay.textContent = 'Score: ' + score;
+        scoreDisplay.textContent = `Score: ${score}`;
         currentRound++;
         if (currentRound < totalRounds) {
             nextRound();
         } else {
-            showWinMessage();
-            stopTimer();
+            handleVictory();
+            endGame();
         }
     }
 
-    // Handle wrong key press
     function handleWrongKeyPress() {
         gameOver = true;
-        playFailureSound();
-        showFailureMessage();
         stopTimer();
+        handleFailure();
     }
 
-    // Keydown event listener to check key press
+    // Add the event listener for keydown events
     document.addEventListener('keydown', (event) => {
         if (gameOver) return;
         if (!timerStarted) startTimer();
@@ -819,7 +820,20 @@ function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
         }
     });
 
-    // Initialize the game
-    generateLetterSequence();
-    nextRound();
+    // Start the game when the start button is pressed
+    const startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', () => {
+        // Show the game box and hide the start button
+        qteBox.style.display = 'block'; // Show the game box
+        startButton.style.display = 'none'; // Hide the start button
+        generateLetterSequence();
+        nextRound();
+        updateTimerDisplay();
+    });
 }
+
+// Ensure the game is created after the page loads
+window.onload = () => {
+    const container = document.getElementById('game-container');
+    createQTEGame(container);
+};
