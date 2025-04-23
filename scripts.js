@@ -623,24 +623,20 @@ EndStart: {
 },
 };
 
-function makeButton(btnText, choice) { // Makes a button for the choices
+function makeButton(btnText, choice) {
     let button = document.createElement("button");
-
     button.innerHTML = btnText;
-
     buttonContainer.appendChild(button);
 
     button.addEventListener("click", function () {
-        history.push(choice);
-        showStory();
+        showScene(choice);
     });
 }
 
-function buildStory(text) { // Builds the story text on the HTML page
-    let storyItem = document.createElement("p"); // Creates necessary HTML elements
 
+function buildStory(text) {
+    let storyItem = document.createElement("p");
     storyItem.innerText = text;
-
     storyContainer.appendChild(storyItem);
 }
 function showStory() {
@@ -823,3 +819,70 @@ function createQTEGame(container, totalRounds = 15, timeLimit = 10) {
     generateLetterSequence();
     nextRound();
 }
+
+function showTextWithAnimation(text, callback) {
+    const totalDuration = 900; // Total animation duration in ms
+    const interval = totalDuration / text.length;
+    let index = 0;
+    let isSkipping = false;
+    storyContainer.innerHTML = ""; // Clear previous text
+    buttonContainer.style.display = "none"; // Hide buttons initially
+
+    const intervalId = setInterval(() => {
+        if (index < text.length && !isSkipping) {
+            storyContainer.innerHTML += text[index];
+            index++;
+        } else {
+            clearInterval(intervalId);
+            storyContainer.innerHTML = text; // Ensure full text is shown
+            document.removeEventListener("click", skipAnimation); // Clean up listener
+            if (callback) callback();
+        }
+    }, interval);
+
+    function skipAnimation() {
+        isSkipping = true;
+    }
+
+    // Delay attaching the click listener by 100ms
+    setTimeout(() => {
+        document.addEventListener("click", skipAnimation);
+    }, 100);
+}
+
+
+
+
+function showScene(sceneKey) {
+    const scene = story[sceneKey];
+    history.push(sceneKey);
+
+    if (scene.image) {
+        storyImage.src = scene.image;
+        storyImage.style.display = "block";
+    } else {
+        storyImage.style.display = "none";
+    }
+
+    // Update and log Rizz and Aura
+    state.valueRizz += scene.valueRizz;
+    state.valueAura += scene.valueAura;
+    console.log(`Rizz: ${state.valueRizz}, Aura: ${state.valueAura}`); // 👈 Log this here
+
+    showTextWithAnimation(scene.text, () => {
+        buttonContainer.innerHTML = "";
+        scene.choices.forEach(([choiceText, nextScene]) => {
+            const button = document.createElement("button");
+            button.textContent = choiceText;
+            button.onclick = () => showScene(nextScene);
+            buttonContainer.appendChild(button);
+        });
+        buttonContainer.style.display = "block";
+    });
+}
+
+
+// Show the first scene
+window.onload = () => {
+    showScene("intro");
+};
