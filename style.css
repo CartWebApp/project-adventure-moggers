@@ -26,7 +26,7 @@ h1{
 }
 
 h2, #buttons{
-    text-align: center;
+    text-align: center;;
 }
 
 *{
@@ -37,12 +37,24 @@ h2{
     color:red;
 }
 
+
 #story-image{
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#image-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0; /* Ensure no padding affects centering */
 }
 
-img{
-    width: 800px;
+img {
+    margin-left: 35%;
 }
 
 p:nth-last-of-type(1){
