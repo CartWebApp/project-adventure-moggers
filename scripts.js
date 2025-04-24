@@ -733,24 +733,20 @@ EndStart: {
 },
 };
 
-function makeButton(btnText, choice) { // Makes a button for the choices
+function makeButton(btnText, choice) {
     let button = document.createElement("button");
-
     button.innerHTML = btnText;
-
     buttonContainer.appendChild(button);
 
     button.addEventListener("click", function () {
-        history.push(choice);
-        showStory();
+        showScene(choice);
     });
 }
 
-function buildStory(text) { // Builds the story text on the HTML page
-    let storyItem = document.createElement("p"); // Creates necessary HTML elements
 
+function buildStory(text) {
+    let storyItem = document.createElement("p");
     storyItem.innerText = text;
-
     storyContainer.appendChild(storyItem);
 }
 function showStory() {
