@@ -558,20 +558,20 @@ Choice6: {
     valueAura: 100 // Set valueAura here
 },
 
-Choice7: {
-    text: ``,
-    choices: [
-    ["", ""], ["",""]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+// Choice7: {
+//     text: ``,
+//     choices: [
+//     ["He cries and runs away", "nil"], ["He calls the cops","nil"]   Figure out how to make it so it chooses one option or another depending on Aura value
+//     ],
+//     image: "pics/john.jpg",
+//     valueRizz: 100, // Set valueRizz here
+//     valueAura: 100 // Set valueAura here
+// },
 
 Choice8: {
-    text: ``,
+    text: `He kicks your butt and mogs you`,
     choices: [
-    ["", ""], ["",""]
+    ["Game Over. GG's!! :)", "intro"]
     ],
     image: "pics/john.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -579,6 +579,56 @@ Choice8: {
 },
 
 Choice9: {
+    text: `Which ingredients will you use for the gains?`,
+    choices: [
+    ["Benadryl", "Choice12"], ["Mystical container contents","Choice12"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice10: {
+    text: `Which ingredients will you use for the gains?`,
+    choices: [
+    ["Meat Smoothie", "Choice12"], ["Vicodin","Choice12"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice11: {
+    text: `You muscle through it because you're a beast. Which machine do you want to work out at?`,
+    choices: [
+    ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004","Choice10"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice12: {
+    text: `You do an intense workout and feel the gains!!!`,
+    choices: [
+    ["Next", "Choice13"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice13: {
+    text: `You finish working out and you notice a buff cosplaying dude working out.`,
+    choices: [
+    ["Approach him...", "Choice14"]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice14: {
     text: ``,
     choices: [
     ["", ""], ["",""]
@@ -588,7 +638,17 @@ Choice9: {
     valueAura: 100 // Set valueAura here
 },
 
-Choice10: {
+Choice15: {
+    text: ``,
+    choices: [
+    ["", ""], ["",""]
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Choice16: {
     text: ``,
     choices: [
     ["", ""], ["",""]
@@ -601,6 +661,56 @@ Choice10: {
 //Costco
 
 Costco: {
+    text: `You arrive at Costco. What do you want to do?`,
+    choices: [
+    ["Refill your gas", "Costco2"], ["Go in and buy a chicken bake", "Costco3"]
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco2: {
+    text: `You go to the gas pump, what are you gonna do?`,
+    choices: [
+    ["Play with gasoline", ""], ["Light a cigar", ""], ["", ""]
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco3: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco4: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco5: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco6: {
     text: ``,
     choices: [
     ["", ""],
