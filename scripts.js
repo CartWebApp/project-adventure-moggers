@@ -834,38 +834,65 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
         };
     };
 
-    // End the game
-    const endGame = (won) => {
+    let timerInterval; // Declare a variable to store the timer interval
 
-        letterDisplay.textContent = '';
-        statusDisplay.textContent = '';
-        timerDisplay.textContent = '';
+// Function to start the timer
+const startTimer = (duration) => {
+    let timeRemaining = duration;
+    timerDisplay.textContent = `Time: ${timeRemaining}`;
 
-        const endScreen = document.createElement('div');
-        endScreen.style.position = 'fixed';
-        endScreen.style.top = '50%';
-        endScreen.style.left = '50%';
-        endScreen.style.transform = 'translate(-50%, -50%)';
-        endScreen.style.textAlign = 'center';
-        endScreen.style.zIndex = '1000';
-
-        const endText = document.createElement('h1');
-        endText.style.fontSize = '4rem';
-        endText.style.color = won ? 'green' : 'red';
-        endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
-        endScreen.appendChild(endText);
-
-        if (won) {
-            const winImage = document.createElement('img');
-            winImage.src = 'path/to/win-image.png'; // Replace with your image path
-            winImage.alt = 'You Win!';
-            winImage.style.width = '300px';
-            winImage.style.marginTop = '20px';
-            endScreen.appendChild(winImage);
+    timerInterval = setInterval(() => {
+        if (timeRemaining > 0) {
+            timeRemaining--;
+            timerDisplay.textContent = `Time: ${timeRemaining}`;
+        } else {
+            clearInterval(timerInterval); // Stop the timer when it reaches 0
+            endGame(false); // End the game as a loss when the timer runs out
         }
+    }, 1000); // Decrement the timer every second
+};
 
-        document.body.appendChild(endScreen);
-    
-        const sound = new Audio(won ? 'path/to/win-sound.mp3' : 'path/to/lose-sound.mp3'); // Replace with your sound paths
-        sound.play();
-    };
+// End the game
+const endGame = (won) => {
+    clearInterval(timerInterval); // Stop the timer when the game ends
+    letterDisplay.textContent = '';
+    statusDisplay.textContent = '';
+    timerDisplay.textContent = '';
+
+    // Remove existing end screen if present
+    const existingEndScreen = document.querySelector('#end-screen');
+    if (existingEndScreen) {
+        existingEndScreen.remove();
+    }
+
+    const endScreen = document.createElement('div');
+    endScreen.id = 'end-screen';
+    endScreen.style.position = 'fixed';
+    endScreen.style.top = '50%';
+    endScreen.style.left = '50%';
+    endScreen.style.transform = 'translate(-50%, -50%)';
+    endScreen.style.textAlign = 'center';
+    endScreen.style.zIndex = '1000';
+
+    const endText = document.createElement('h1');
+    endText.style.fontSize = '4rem';
+    endText.style.color = won ? 'green' : 'red';
+    endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
+    endScreen.appendChild(endText);
+
+    if (won) {
+        const winImage = document.createElement('img');
+        winImage.src = 'path/to/win-image.png'; // Replace with your image path
+        winImage.alt = 'Celebratory image for winning the game';
+        winImage.style.width = '300px';
+        winImage.style.marginTop = '20px';
+        endScreen.appendChild(winImage);
+    }
+
+    document.body.appendChild(endScreen);
+
+    const sound = new Audio(won ? 'path/to/win-sound.mp3' : 'path/to/lose-sound.mp3'); // Replace with your sound paths
+    sound.play().catch((error) => {
+        console.error('Audio playback failed:', error);
+    });
+};
