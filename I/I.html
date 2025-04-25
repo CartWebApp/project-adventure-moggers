@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QTE Game</title>
+  <link rel="stylesheet" href="I.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Quick Time Event</h1>
+    <button id="startBtn">Start QTE</button>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <p id="timer">Time Left: 00:00</p>
+    <p id="sequence"></p>
+    <p id="status">Press the keys in order!</p>
+    <audio id="winSound" src="win.mp3" preload="auto"></audio>
+    <audio id="loseSound" src="lose.mp3" preload="auto"></audio>
+    
+    <!-- Result message (hidden by default) -->
+    <div id="resultMessage" class="hidden"></div>
+  </div>
+
+  <script src="I.js"></script>
+</body>
+</html>

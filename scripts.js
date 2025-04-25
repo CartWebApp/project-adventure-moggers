@@ -17,7 +17,7 @@ const story = {
         choices: [
             ["Barbershop", "barb1"], // x = button description, y = next page
             ["Gym", "Gym"],
-            ["Costco", "Costco"]
+            ["Costco", "Costco1"]
         ],
         image: "pics/story.jpg", // set image related to the event
         valueRizz: 0, // ValueRizz for this page
@@ -558,15 +558,15 @@ Choice6: {
     valueAura: 100 // Set valueAura here
 },
 
-// Choice7: {
-//     text: ``,
-//     choices: [
-//     ["He cries and runs away", "nil"], ["He calls the cops","nil"]   Figure out how to make it so it chooses one option or another depending on Aura value
-//     ],
-//     image: "pics/john.jpg",
-//     valueRizz: 100, // Set valueRizz here
-//     valueAura: 100 // Set valueAura here
-// },
+Choice7: {
+    text: ``,
+    choices: [
+    ["He cries and runs away", "nil"], ["He calls the cops","nil"]   //Figure out how to make it so it chooses one option or another depending on Aura value
+    ],
+    image: "pics/john.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
 
 Choice8: {
     text: `He kicks your butt and mogs you`,
@@ -660,7 +660,7 @@ Choice16: {
 
 //Costco
 
-Costco: {
+Costco1: {
     text: `You arrive at Costco. What do you want to do?`,
     choices: [
     ["Refill your gas", "Costco2"], ["Go in and buy a chicken bake", "Costco3"]
@@ -673,7 +673,7 @@ Costco: {
 Costco2: {
     text: `You go to the gas pump, what are you gonna do?`,
     choices: [
-    ["Play with gasoline", ""], ["Light a cigar", ""], ["", ""]
+    ["Play with gasoline", "Costco4"], ["Light a cigar", "Costco5"], ["Pump gas", "Costco6"]
     ],
     image: "pics/.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -681,9 +681,9 @@ Costco2: {
 },
 
 Costco3: {
-    text: ``,
+    text: `You go and buy the Chicken Bake. You are now the proud owner of a Chicken Bake. You fill your mouth with Chicken Bake. What do you rate it?`,
     choices: [
-    ["", ""],
+    ["1 BIG BOOM!!!", "Costco7"], ["5 BIG BOOMS!!!", "Costco8"]
     ],
     image: "pics/.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -691,9 +691,9 @@ Costco3: {
 },
 
 Costco4: {
-    text: ``,
+    text: `As you're flinging gasoline around, an old man walking by happens to be lighting a cigar, which ignite all of the gasoline that you've been playing with.`,
     choices: [
-    ["", ""],
+    ["You stand there aura farming nonchalantly as you're engulfed in the flames and explosions erupting around you.", "Costco9"],
     ],
     image: "pics/.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -701,6 +701,96 @@ Costco4: {
 },
 
 Costco5: {
+    text: `An old man walking by notices your super epic and incredibly manly cigar, he begins to walk over. What are you gonna do?`,
+    choices: [
+    ["Smoke the cigar super nonchalantly and wait for the old man", "Costco10"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco6: {
+    text: `You pay for the gas and reach for the nozzle, but as you grab it and start to pump gas, your incredibly shredded arms are too powerful and you absolutely obliterate the gas nozzle.`,
+    choices: [
+    ["whoops :|", "Costco11"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco7: {
+    text: `You rate the Chicken Bake 1 BIG BOOM!!!, the cashier who sold you the chicken bake stares at you with a blazing rage behind his eyes. He lunges over the counter and attack you!`,
+    choices: [
+    ["Fight back", "Costco12"], ["Run away", "Costco13"],
+    ],
+    image: "pics/speed-attack.gif",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco8: {
+    text: `You rate the Chicken Bake 5 BIG BOOMS!!!, the cashier is delighted at your review and gives you a free Chicken Bake!`,
+    choices: [
+    ["Yippee!!!!! Thanks!", "Costco14"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco9: {
+    text: `You walk out of the fire slowly and confidently, your aura is radiating making everybody who witnessed the explosing awestruck, as you're walking away, one final massive explosion happens and you DON'T turn back.`,
+    choices: [
+    ["look over and notice a man who stands out from the crown looking at you... almost like he's proud of you.", "Costco15"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco10: {
+    text: `The old man approached you and compliments you and your cigar and says you look super friggin epic with a cigar`,
+    choices: [
+    ["Thank him", "Costco16"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco11: {
+    text: `You're standing there dumbfounded and awestruck at the sheer power of your own arms, an old man notices your strength and approaches you.`,
+    choices: [
+    ["look over, notice the man, and greet him", "Costco17"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco12: {
+    text: `You decide to fight back against the cashier, you throw a punch at him and he dodges it, but you manage to hit him with a sick combo and he falls to the ground. He's dead. You feel like a god.`,
+    choices: [
+    ["Attempt to flee the scene", "Costco18"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco13: {
+    text: `You run out of Costco. Where do you go?`,
+    choices: [
+    ["Go to the barb", ""], ["Go to the Gym", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco: {
     text: ``,
     choices: [
     ["", ""],
@@ -710,7 +800,7 @@ Costco5: {
     valueAura: 100 // Set valueAura here
 },
 
-Costco6: {
+Costco: {
     text: ``,
     choices: [
     ["", ""],
@@ -791,141 +881,3 @@ function showStory() {
 showStory();
 
 /// QTE GAME
-let qteKeyHandler = null;
-
-function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
-    container.innerHTML = '';
-
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    let currentRound = 0, score = 0, gameOver = false;
-    let timerInterval = null;
-    let targetLetter = '';
-
-    const qteBox = document.createElement('div');
-    const letterDisplay = document.createElement('h2');
-    const statusDisplay = document.createElement('p');
-    const scoreDisplay = document.createElement('p');
-    const timerDisplay = document.createElement('p');
-
-    qteBox.id = 'qte-box';
-    container.append(qteBox, letterDisplay, statusDisplay, scoreDisplay, timerDisplay);
-
-    function startRound() {
-        if (currentRound >= totalRounds) return endGame(true);
-        currentRound++;
-        targetLetter = letters[Math.floor(Math.random() * letters.length)];
-        letterDisplay.textContent = `Press: ${targetLetter}`;
-        statusDisplay.textContent = `Round ${currentRound} of ${totalRounds}`;
-    }
-
-    qteKeyHandler = function (e) {
-        if (gameOver) return;
-        if (e.key.toUpperCase() === targetLetter) {
-            score++;
-            scoreDisplay.textContent = `Score: ${score}`;
-            startRound();
-        }
-    };
-
-    document.addEventListener("keydown", qteKeyHandler);
-
-    function endGame(won) {
-        gameOver = true;
-        clearInterval(timerInterval);
-        document.removeEventListener("keydown", qteKeyHandler);
-        qteKeyHandler = null;
-
-        const endText = document.createElement('h1');
-        endText.style.fontSize = '4rem';
-        endText.style.color = won ? 'green' : 'red';
-        endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
-        qteBox.innerHTML = '';
-        qteBox.appendChild(endText);
-    }
-
-    // Timer
-    let timeRemaining = timeLimit;
-    timerDisplay.textContent = `Time: ${timeRemaining}`;
-    timerInterval = setInterval(() => {
-        timeRemaining--;
-        timerDisplay.textContent = `Time: ${timeRemaining}`;
-        if (timeRemaining <= 0) {
-            endGame(false);
-        }
-    }, 1000);
-
-    startRound();
-}
-
-const shopItems = [
-    { name: "Protein Shake", cost: 5 },
-    { name: "Drip Jacket", cost: 10 },
-    { name: "Job Application", cost: 15 }
-];
-
-const inventoryList = document.getElementById("inventory-list");
-const shopList = document.getElementById("shop-items");
-const shopContainer = document.getElementById("shop");
-
-function renderShop() {
-    shopList.innerHTML = '';
-    shopItems.forEach(item => {
-        const li = document.createElement("li");
-        const btn = document.createElement("button");
-
-        btn.innerText = `${item.name} - ${item.cost} Rizzpoints`;
-        btn.addEventListener("click", () => {
-            if (state.valueRizz >= item.cost) {
-                // Deduct the cost from Rizzpoints
-                state.valueRizz -= item.cost;
-                // Add item to the player's inventory
-                const newItem = document.createElement("li");
-                newItem.innerText = item.name;
-                inventoryList.appendChild(newItem);
-                // Award additional Aurapoints
-                state.valueAura += 50;
-                alert(`You bought a ${item.name}! You also received 50 Aurapoints!`);
-                console.log("New Rizzpoint balance:", state.valueRizz);
-                console.log("New Aurapoint balance:", state.valueAura);
-            } else {
-                alert(`Not enough Rizzpoints!`);
-            }
-        });
-
-        li.appendChild(btn);
-        shopList.appendChild(li);
-    });
-}
-
-// Universal key handler (QTE-aware)
-document.addEventListener("keydown", function (event) {
-    if (qteKeyHandler) return; // Skip if QTE is active
-
-    // Toggle inventory
-    if (event.key === "i" || event.key === "I") {
-        const inventory = document.getElementById("inventory");
-        inventory.style.display = 
-            (inventory.style.display === "none" || inventory.style.display === "") 
-            ? "flex" 
-            : "none";
-    }
-
-    // Toggle shop
-    if (event.key === "s" || event.key === "S") {
-        const shop = document.getElementById("shop");
-        if (shop.style.display === "none" || shop.style.display === "") {
-            shop.style.display = "flex";
-            renderShop();
-        } else {
-            shop.style.display = "none";
-        }
-    }
-});
-
-document.getElementById("start-qte").addEventListener("click", function() {
-    // Assuming 'story' is the container for your story content
-    const storyContainer = document.getElementById("story");
-    
-    // Start the QTE game
-    createQTEGame(storyContainer);
-});

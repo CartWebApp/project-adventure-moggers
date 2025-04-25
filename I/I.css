@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main game container */
+  #game {
+    background-color: #282c34;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 400px;
+  }
+  
+  /* Title text */
+  h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Timer and sequence text */
+  #timer, #sequence, #status {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+  }
+  
+  #timer {
+    font-weight: bold;
+  }
+  
+  #sequence {
+    font-size: 22px;
+    color: #f39c12;
+    font-weight: bold;
+  }
+  
+  /* Start button and difficulty selector */
+  button, select {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, select:hover {
+    background-color: #2980b9;
+  }
+  
+  button:focus, select:focus {
+    outline: none;
+  }
+  
+  /* Hidden result message */
+  #resultMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    font-weight: bold;
+    visibility: hidden;
+    text-align: center;
+  }
+  
+  /* Success and Failure result styles */
+  #resultMessage.success {
+    color: green;
+  }
+  
+  #resultMessage.failure {
+    color: red;
+  }
+  
+  /* Adding a slight shadow effect on the result message */
+  #resultMessage.success,
+  #resultMessage.failure {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Styling for the select difficulty box */
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #34495e;
+    color: white;
+  }
+  
+  /* Centering everything nicely with flexbox */
+  #game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #game .hidden {
+    visibility: hidden;
+  }
+  
+  @media (max-width: 600px) {
+    #game {
+      width: 90%;
+    }
+    #resultMessage {
+      font-size: 100px;
+    }
+  }
