@@ -732,7 +732,6 @@ EndStart: {
     valueAura: 100 // Set valueAura here
 },
 };
-
 function makeButton(btnText, choice) {
     let button = document.createElement("button");
     button.innerHTML = btnText;
@@ -743,65 +742,65 @@ function makeButton(btnText, choice) {
     });
 }
 
+function showScene(pageKey) {
+    history.push(pageKey);
+    showStory();
+}
 
 function buildStory(text) {
     let storyItem = document.createElement("p");
     storyItem.innerText = text;
     storyContainer.appendChild(storyItem);
 }
+
 function showStory() {
-    let currentPage = history[history.length - 1]; 
-
-    storyContainer.innerHTML = ""; 
-    buttonContainer.innerHTML = ""; // reset buttons
-    imageContainer.style.display = "none"; 
-
+    const currentPage = history[history.length - 1];
+    storyContainer.innerHTML = "";
+    buttonContainer.innerHTML = "";
+    imageContainer.style.display = "none";
 
     if (currentPage === "end1") {
-        // Resets the story and points
         state.valueRizz = 0;
         state.valueAura = 0;
-        history = ["intro"]; // clear the history 
+        history = ["intro"];
     }
 
     buildStory(story[currentPage].text);
 
-    // If the current page is the one where QTE should trigger
-    if (currentPage === "gangshyt") {  // Change "gangshyt" to any page where QTE should happen
-        createQTEGame(document.getElementById("story"));  // This will display the QTE game in the story container
+    if (currentPage === "gangshyt") {
+        createQTEGame(document.getElementById("story"));
     } else {
-        // Build buttons based on the current page's choices
         for (let choice of story[currentPage].choices) {
             makeButton(choice[0], choice[1]);
         }
     }
 
-    // Accumulate the current page's Rizz and Aura values
     state.valueRizz += story[currentPage].valueRizz;
     state.valueAura += story[currentPage].valueAura;
 
-    // Log the accumulated values to the console
     console.log("Accumulated Value Rizz:", state.valueRizz);
     console.log("Accumulated Value Aura:", state.valueAura);
 
-    // Display image based on current page if available
     if (story[currentPage].image) {
         storyImage.src = story[currentPage].image;
-        storyImage.style.display = "block"; // show the image
-        imageContainer.style.display = "block"; // ensure image container is shown
+        storyImage.style.display = "block";
+        imageContainer.style.display = "block";
     }
 }
 
 showStory();
 
-//QTE
+/// QTE GAME
+let qteKeyHandler = null;
+
 function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
-    container.innerHTML = ''; // Clear container
+    container.innerHTML = '';
 
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    let currentRound = 0, score = 0, timeLeft = timeLimit, gameOver = false;
+    let currentRound = 0, score = 0, gameOver = false;
+    let timerInterval = null;
+    let targetLetter = '';
 
-    // Create and append DOM elements
     const qteBox = document.createElement('div');
     const letterDisplay = document.createElement('h2');
     const statusDisplay = document.createElement('p');
@@ -811,88 +810,118 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
     qteBox.id = 'qte-box';
     container.append(qteBox, letterDisplay, statusDisplay, scoreDisplay, timerDisplay);
 
-    // Helper to update the timer
-    const updateTimer = () => {
-        timerDisplay.textContent = `Time Left: ${timeLeft}s`;
-        if (timeLeft <= 0) endGame(false);
-    };
-
-    // Helper to start a new round
-    const startRound = () => {
+    function startRound() {
         if (currentRound >= totalRounds) return endGame(true);
         currentRound++;
-        const targetLetter = letters[Math.floor(Math.random() * letters.length)];
+        targetLetter = letters[Math.floor(Math.random() * letters.length)];
         letterDisplay.textContent = `Press: ${targetLetter}`;
         statusDisplay.textContent = `Round ${currentRound} of ${totalRounds}`;
-        document.onkeydown = (e) => {
-            if (gameOver) return;
-            if (e.key.toUpperCase() === targetLetter) {
-                score++;
-                scoreDisplay.textContent = `Score: ${score}`;
-                startRound();
-            }
-        };
+    }
+
+    qteKeyHandler = function (e) {
+        if (gameOver) return;
+        if (e.key.toUpperCase() === targetLetter) {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            startRound();
+        }
     };
 
-    let timerInterval; // Declare a variable to store the timer interval
+    document.addEventListener("keydown", qteKeyHandler);
 
-// Function to start the timer
-const startTimer = (duration) => {
-    let timeRemaining = duration;
+    function endGame(won) {
+        gameOver = true;
+        clearInterval(timerInterval);
+        document.removeEventListener("keydown", qteKeyHandler);
+        qteKeyHandler = null;
+
+        const endText = document.createElement('h1');
+        endText.style.fontSize = '4rem';
+        endText.style.color = won ? 'green' : 'red';
+        endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
+        qteBox.innerHTML = '';
+        qteBox.appendChild(endText);
+    }
+
+    // Timer
+    let timeRemaining = timeLimit;
     timerDisplay.textContent = `Time: ${timeRemaining}`;
-
     timerInterval = setInterval(() => {
-        if (timeRemaining > 0) {
-            timeRemaining--;
-            timerDisplay.textContent = `Time: ${timeRemaining}`;
-        } else {
-            clearInterval(timerInterval); // Stop the timer when it reaches 0
-            endGame(false); // End the game as a loss when the timer runs out
+        timeRemaining--;
+        timerDisplay.textContent = `Time: ${timeRemaining}`;
+        if (timeRemaining <= 0) {
+            endGame(false);
         }
-    }, 1000); // Decrement the timer every second
-};
+    }, 1000);
 
-// End the game
-const endGame = (won) => {
-    clearInterval(timerInterval); // Stop the timer when the game ends
-    letterDisplay.textContent = '';
-    statusDisplay.textContent = '';
-    timerDisplay.textContent = '';
+    startRound();
+}
 
-    // Remove existing end screen if present
-    const existingEndScreen = document.querySelector('#end-screen');
-    if (existingEndScreen) {
-        existingEndScreen.remove();
-    }
+/// SHOP SYSTEM
+const shopItems = [
+    { name: "Protein Shake", cost: 5 },
+    { name: "Drip Jacket", cost: 10 },
+    { name: "Job Application", cost: 15 }
+];
 
-    const endScreen = document.createElement('div');
-    endScreen.id = 'end-screen';
-    endScreen.style.position = 'fixed';
-    endScreen.style.top = '50%';
-    endScreen.style.left = '50%';
-    endScreen.style.transform = 'translate(-50%, -50%)';
-    endScreen.style.textAlign = 'center';
-    endScreen.style.zIndex = '1000';
+const inventoryList = document.getElementById("inventory-list");
+const shopList = document.getElementById("shop-items");
+const shopContainer = document.getElementById("shop");
 
-    const endText = document.createElement('h1');
-    endText.style.fontSize = '4rem';
-    endText.style.color = won ? 'green' : 'red';
-    endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
-    endScreen.appendChild(endText);
+function renderShop() {
+    shopList.innerHTML = '';
+    shopItems.forEach(item => {
+        const li = document.createElement("li");
+        const btn = document.createElement("button");
 
-    if (won) {
-        const winImage = document.createElement('img');
-        winImage.src = 'path/to/win-image.png'; // Replace with your image path
-        winImage.alt = 'Celebratory image for winning the game';
-        winImage.style.width = '300px';
-        winImage.style.marginTop = '20px';
-        endScreen.appendChild(winImage);
-    }
+        btn.innerText = `${item.name} - ${item.cost} Rizzpoints`;
+        btn.addEventListener("click", () => {
+            if (state.valueRizz >= item.cost) {
+                state.valueRizz -= item.cost;
+                const newItem = document.createElement("li");
+                newItem.innerText = item.name;
+                inventoryList.appendChild(newItem);
+                alert(`You bought a ${item.name}!`);
+                console.log("New Rizzpoint balance:", state.valueRizz);
+            } else {
+                alert(`Not enough Rizzpoints!`);
+            }
+        });
 
-    document.body.appendChild(endScreen);
-
-    const sound = new Audio(won ? 'path/to/win-sound.mp3' : 'path/to/lose-sound.mp3'); // Replace with your sound paths
-    sound.play().catch((error) => {
-        console.error('Audio playback failed:', error);
+        li.appendChild(btn);
+        shopList.appendChild(li);
     });
-};
+}
+
+// Universal key handler (QTE-aware)
+document.addEventListener("keydown", function (event) {
+    if (qteKeyHandler) return; // Skip if QTE is active
+
+    // Toggle inventory
+    if (event.key === "i" || event.key === "I") {
+        const inventory = document.getElementById("inventory");
+        inventory.style.display = 
+            (inventory.style.display === "none" || inventory.style.display === "") 
+            ? "flex" 
+            : "none";
+    }
+
+    // Toggle shop
+    if (event.key === "s" || event.key === "S") {
+        const shop = document.getElementById("shop");
+        if (shop.style.display === "none" || shop.style.display === "") {
+            shop.style.display = "flex";
+            renderShop();
+        } else {
+            shop.style.display = "none";
+        }
+    }
+});
+
+document.getElementById("start-qte").addEventListener("click", function() {
+    // Assuming 'story' is the container for your story content
+    const storyContainer = document.getElementById("story");
+    
+    // Start the QTE game
+    createQTEGame(storyContainer);
+});

@@ -38,9 +38,13 @@ h2{
 }
 
 
-#story-image{
-    margin-top: 10px;
+#story-image {
+    width: 600px;
+    height: 660px;
+    display: block;
+    margin:  auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 #image-container {
     width: 80%;
@@ -50,11 +54,7 @@ h2{
     margin-bottom: 30px;
     margin-top: 40px;
     border: 1px solid rgb(255, 255, 255);
-    padding: 0; /* Ensure no padding affects centering */
-}
-
-img {
-    margin-left: 35%;
+    padding: 0;
 }
 
 p:nth-last-of-type(1){
@@ -207,3 +207,50 @@ button:hover {
 #qte-box {
     display: none; /* Keep hidden initially */
 }
+
+#inventory, #shop {
+    display: none;
+}
+
+.inv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0 auto;
+    padding: 10px;
+    transform: translate(0%, 300%);
+    color: white;
+    position: absolute;
+}
+
+#inventory-list {
+    display: flex;
+    gap: 15px; /* optional spacing between items */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+ul{
+    display: inline;
+}
+
+#inventory {
+    display: none; /* Hide initially */
+}
+
+#shop-items li, #inventory-list li {
+    margin: 5px;
+    list-style-type: none;
+}
+
+#shop.inv{
+    position: absolute;
+    transform: translate(0%, 80%);
+}
+
+
