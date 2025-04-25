@@ -857,7 +857,6 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
     startRound();
 }
 
-/// SHOP SYSTEM
 const shopItems = [
     { name: "Protein Shake", cost: 5 },
     { name: "Drip Jacket", cost: 10 },
@@ -877,12 +876,17 @@ function renderShop() {
         btn.innerText = `${item.name} - ${item.cost} Rizzpoints`;
         btn.addEventListener("click", () => {
             if (state.valueRizz >= item.cost) {
+                // Deduct the cost from Rizzpoints
                 state.valueRizz -= item.cost;
+                // Add item to the player's inventory
                 const newItem = document.createElement("li");
                 newItem.innerText = item.name;
                 inventoryList.appendChild(newItem);
-                alert(`You bought a ${item.name}!`);
+                // Award additional Aurapoints
+                state.valueAura += 50;
+                alert(`You bought a ${item.name}! You also received 50 Aurapoints!`);
                 console.log("New Rizzpoint balance:", state.valueRizz);
+                console.log("New Aurapoint balance:", state.valueAura);
             } else {
                 alert(`Not enough Rizzpoints!`);
             }
