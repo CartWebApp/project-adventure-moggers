@@ -23,25 +23,39 @@
 
 
     <div id="image-container">
-        <img id="story-image" src="" alt="Story Image" style="width: 600px; height: 660px; display: none;">    </div>
+        <img id="story-image" src="" alt="Story Image">
+    </div>
 
     <div id="story"></div>
     <div id="buttons"></div>
-    <button id="start-qte">Start QTE</button>
+    <button id="back-to-intro" class="nav-button">Back to Intro</button>
+    <button id="start-qte" hidden >Start QTE</button>
+
     <div id="shop" style="display: none;" class="inv">
         <h2>Shop</h2>
-        <ul id="shop-items">
-            <!-- Items will be added dynamically -->
-        </ul>
+        <ul id="shop-items"></ul>
     </div>
-    <div id="inventory" class="inv">
 
+    <div id="inventory" class="inv">
         <h2>Inventory</h2>
         <ul id="inventory-list">
-            <li>example</li>
-            
         </ul>
     </div>
+
+    <div id="scoreboard" style="
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;">
+    Rizz: <span id="rizz-score">0</span> | Aura: <span id="aura-score">0</span>
+</div>
 
     <script src="scripts.js"></script>
 

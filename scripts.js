@@ -29,8 +29,8 @@ const story = {
             ["Epic!!!", "barb1s"],
         ],
         image: "pics/barber.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barb1s: {
         text: `"Hey sport! How's the wife?"`,
@@ -38,8 +38,8 @@ const story = {
             [`"She's just dandy, Jack."`, "barb1st"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barb1st: {
         text: `"Glad to hear that Jim. So what can I do for ya?"`,
@@ -47,8 +47,8 @@ const story = {
             [`"Wifey says I need a job. I gotta get spiffy and quick! Any recomendations?"`, "barb1sts"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barb1sts: {
         text: `"Do I? Hell yes I do brother. Heres what I got on the menu today fine fella. Take your pick!"`,
@@ -58,8 +58,8 @@ const story = {
             ["Dreads", "barbdreads"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbtape: {
         text: `"Ah the low taper fade! Excellent choice! Alright, just sit there and look pretty while I work my magic."`,
@@ -67,8 +67,8 @@ const story = {
             [`"Yes king"`, "barbtape1"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 5, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbtape1: {
         text: `After a few minutes of waiting, your haircut is finished. You look like a million bucks!`,
@@ -76,8 +76,8 @@ const story = {
             ["Frickin' Sweet", "barbtape2"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 20 // Set valueAura here
     },
     barbtape2: {
         text: `"Frickin' sweet! You look like a million bucks! Now go get em' tiger!"`,
@@ -85,8 +85,8 @@ const story = {
             [`"Le Epic"`, "barbtape3"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbtape3: {
         text: `You leave the barbershop filled with confidence. You're ready to take on the world! And this interview.`,
@@ -94,18 +94,18 @@ const story = {
             ["RAAHHHHHH", "barbtape4"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
-   
+
     barbtape4: {
-        text: "But when you walk outside, you get mistaken for wanted cirminal: Tyler ``fornite ``ninja```` Blevins and you are immediately sent to prison.",
+        text: "But when you walk outside, you get mistaken for wanted cirminal: Tyler ``fornite`` ``ninja`` Blevins and you are immediately sent to prison.",
         choices: [
             ["Bruh", "barb2w"]
         ],
         image: "pics/jail.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 100
     },
     barb2w: {
         text: "You arrive at prison. You need protection if you are to survive. Which gang do you join?",
@@ -120,12 +120,21 @@ const story = {
     barb3J: {
         text: "You join the Gamblers. What do you do now?",
         choices: [
-            ["Mog their leader", "end1"],
+            ["Mog their leader", "mogleader"],
             ["Assimilate", "barbj2"]
         ],
         image: "pics/image_3.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 100
+    },
+    mogleader: {
+        text: "You try to mog the king gambler but die instantly LOL!!!!",
+        choices: [
+            ["I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE ", "end1"],
+        ],
+        image: "pics/ultrakill-death.gif",
+        valueRizz: -10025,
+        valueAura: -10000
     },
     barbj2: {
         text: "You decide to assimilate. They agree to take you in, but they have a challenge for you. You must gamble your lungs.",
@@ -134,7 +143,7 @@ const story = {
         ],
         image: "pics/figure.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 75
     },
     barbh0: {
         text: "Call it, pretty boy.",
@@ -152,8 +161,8 @@ const story = {
             ["ez", "barbh"]
         ],
         image: "pics/figure.jpg",
-        valueRizz: 0,
-        valueAura: 0
+        valueRizz: 200,
+        valueAura: 500
     },
     barbh: {
         text: "You win! Now you have 134 pairs of lungs! Now that you are the sole member of the rival gang, the Juggers, they are coming to kill you! What do you do?",
@@ -162,8 +171,8 @@ const story = {
             ["Try to escape", "barbe"]
         ],
         image: "pics/scared.jpg",
-        valueRizz: 0,
-        valueAura: 0
+        valueRizz: 2000,
+        valueAura: 1000
     },
     barbe: {
         text: "You manage to mog the very walls of your cell!",
@@ -172,7 +181,7 @@ const story = {
         ],
         image: "pics/phew.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 300
     },
     barbe1: {
         text: "Your creation of an escape got the Juggers off your tail. You run away and hitchhike back to the city.",
@@ -190,7 +199,7 @@ const story = {
         ],
         image: "pics/phew.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 200
     },
     barb4: {
         text: "You go to the Juggers. What do you plan to do?",
@@ -200,7 +209,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 100
     },
     barbjug2: {
         text: "You get rejected! You just gonna let that happen?",
@@ -209,7 +218,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: -500
     },
     barbjug3: {
         text: "You mog thier leader and become the king Jugger. What do you do first as thier leader?",
@@ -218,8 +227,8 @@ const story = {
             ["Live out the rest of your days doing that you love", "end1"] //change
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
-        valueAura: 0
+        valueRizz: 100,
+        valueAura: 1000
     },
     prisonjug: {
         text: "You decide to jug the prison and all your goons start laying seige. Who's your first target?",
@@ -229,7 +238,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 2000
     },
     prisonjug1: {
         text: "You find the warden and try to take him out.",//qte but you fail no matter what and when you do you just escape
@@ -256,7 +265,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: -1000
     },
     prisonjug4: {
         text: "Badly.",//qte but you fail no matter what and when you do you just escape
@@ -265,7 +274,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: -10
     },
     prisonjug5: {
         text: "Maybe it's time to bail",//qte but you fail no matter what and when you do you just escape
@@ -274,7 +283,7 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: -5
     },
     prisonjug6: {
         text: "You sick your goons on the warden, and as hes tearing them apart you slip away outside the prison.",//qte but you fail no matter what and when you do you just escape
@@ -292,123 +301,123 @@ const story = {
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 50
     },
     aftermath: {
-        text: "After winning the war, you indoctrinate all the Gamblers into your ranks of goons. Do you escap with sheer numbers or live out the rest of your days as top dog in this prison?", 
+        text: "After winning the war, you indoctrinate all the Gamblers into your ranks of goons. Do you escap with sheer numbers or live out the rest of your days as top dog in this prison?",
         choices: [
-            ["Jug", "end1"], 
+            ["Jug", "end1"],
             ["escape", "EndStart"]
         ],
         image: "pics/.jpg",
         valueRizz: 0,
-        valueAura: 0
+        valueAura: 100
     },
     barbbald: {
-        text: `"Bald? Really? What ever you say boss."`,
+        text: `"Bald? Really? Okayyy. What ever you say boss."`,
         choices: [
-        [`"Yeah. Good boy."`, "barbbald1"],
+            [`"Yeah. Good boy."`, "barbbald1"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: -100, // Set valueRizz here
+        valueAura: -100 // Set valueAura here
     },
     barbbald1: {
         text: `"Don't do that"`,
         choices: [
-        [`"I do what I want"`, "barbbald2"],
+            [`"I do what I want"`, "barbbald2"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 10 // Set valueAura here
     },
     barbbald2: {
-        text: `"Boom youre bald now. Happy?"`,
+        text: `"Boom you're bald now. Happy?"`,
         choices: [
-        [`"Yeah!"`, "barbbald3"],
+            [`"Yeah!"`, "barbbald3"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbbald3: {
         text: `"You're cooked"`,
         choices: [
-        [`"Sybau"`, "barbbald4"],
+            [`"Sybau"`, "barbbald4"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura:-10 // Set valueAura here
     },
     barbbald4: {
         text: `You leave the barbershop filled with confidence. You are ready to take on the world! And this interview.`,
         choices: [
-        ["hell yeah!", "barbbald5"],
+            ["hell yeah!", "barbbald5"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbbald5: {
         text: `Youre wife tries to ft. Oh no`,
         choices: [
-        [`"oh no"`, "barbbald6"],
+            [`"oh no"`, "barbbald6"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -10 // Set valueAura here
     },
     barbbald6: {
-        text: `If you hang up, she'll become sus of you and just call again. There's no way out of this. You pick up`,
+        text: `If you hang up, she'll become suspicous and just call again. There's no way out of this. You pick up`,
         choices: [
-        [`"crap"`, "barbbald7"],
+            [`"crap"`, "barbbald7"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -100 // Set valueAura here
     },
     barbbald7: {
-        text: `She gets a eyeful of your shimmering forhead`,
+        text: `She gets a eyeful of your shimmering forehead`,
         choices: [
-        ["...", "barbbald8"],
+            ["...", "barbbald8"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -1000 // Set valueAura here
     },
     barbbald8: {
         text: "...",
         choices: [
-        ["...", "barbald81"],
+            ["...", "barbald81"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -10000 // Set valueAura here
     },
     barbald81: {
         text: "...",
         choices: [
-        ["...", "barbbald82"],
+            ["...", "barbbald82"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -100000 // Set valueAura here
     },
     barbbald82: {
         text: `"I'm Leaving you."`,
         choices: [
-        [`"ok"`, "end1"],
+            [`"ok"`, "end1"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimbald.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: -10000000 // Set valueAura here
     },
     end1: {
         text: "GG!",
         choices: [
             ["k", "intro"] // Option to restart the game from the beginning
         ],
-        image: "pics/end.jpg",
+        image: "pics/end.png",
         valueRizz: 0,
         valueAura: 0
     },
@@ -416,147 +425,147 @@ const story = {
     barbdreads: {
         text: `"Dreads? okay I see you I fw it."`,
         choices: [
-        [`"yurrr"`, "barbdreads1"],
+            [`"yurrr"`, "barbdreads1"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 500 // Set valueAura here
     },
     barbdreads1: {
         text: `"Dreads are pretty hot these days, luckily for you so am I. Im really good. At barbering."`,
         choices: [
-        [`"ok"`, "barbdreads2"],
+            [`"ok"`, "barbdreads2"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbdreads2: {
         text: `"Check ts out."`,
         choices: [
-        [`"ok"`, "barbdreads3"],
+            [`"ok"`, "barbdreads3"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbdreads3: {
         text: `"Viola!"`,
         choices: [
-        [`"It's 'voila'"`, "barbdreads4"],
+            [`"It's 'voila'"`, "barbdreads4"],
         ],
-        image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        image: "pics/jimdreads.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 50 // Set valueAura here
     },
     barbdreads4: {
         text: `"I don't care. Say, where are you heading to in to show off these puppies?"`,
         choices: [
-        [`"No clue buddy"`, "barbdreads5"],
+            [`"No clue buddy"`, "barbdreads5"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
     },
     barbdreads5: {
         text: `"I do! You should go to costco! Thats where all the babes- I mean jobs are nowadays."`,
         choices: [
-        [`"Yeah, jobs..."`, "barbdreads6"],
+            [`"Yeah, jobs..."`, "barbdreads6"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 100, // Set valueRizz here
-        valueAura: 100 // Set valueAura here
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 10 // Set valueAura here
     },
     barbdreads6: {
         text: `"Alright well, you better get going then, they open soon and I bet you want to score some cred by being early."`,
         choices: [
-        [`"Sounds good. Thanks vrodie pie"`, "barbdreads7"],
+            [`"Sounds good. Thanks vrodie pie"`, "barbdreads7"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/jimdreads.png",
         valueRizz: 100, // Set valueRizz here
         valueAura: 100 // Set valueAura here
     },
     barbdreads6: {
         text: `"Anytime."`,
         choices: [
-        ["Go to Costco", "Costco"],
+            ["Go to Costco", "Costco"],
         ],
         image: "pics/john.jpg",
         valueRizz: 100, // Set valueRizz here
         valueAura: 100 // Set valueAura here
     },
 
-//Gym
+    //Gym
 
-Gym: {
-    text: `You head to the gym, what do you want to do?`,
-    choices: [
-    ["Walk in", "Choice1"], ["Play on the monkey bars","Choice2"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Gym: {
+        text: `You head to the gym, what do you want to do?`,
+        choices: [
+            ["Walk in", "Choice1"], ["Play on the monkey bars", "Choice2"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice1: {
-    text: `You forgot to scan in! The guy at the front desk is furious.`,
-    choices: [
-    ["Next", "Choice3"],
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice1: {
+        text: `You forgot to scan in! The guy at the front desk is furious.`,
+        choices: [
+            ["Next", "Choice3"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice2: {
-    text: `An old man makes fun of you and tells you that monkey bars are for kids. :(`,
-    choices: [
-    ["Next", "Choice4"],
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice2: {
+        text: `An old man makes fun of you and tells you that monkey bars are for kids. :(`,
+        choices: [
+            ["Next", "Choice4"],
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice3: {
-    text: `The desk man is FURIOUS!! What will you do?`,
-    choices: [
-    ["Apologize and check in", "Choice5"], ["Insult him","Choice6"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice3: {
+        text: `The desk man is FURIOUS!! What will you do?`,
+        choices: [
+            ["Apologize and check in", "Choice5"], ["Insult him", "Choice6"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice4: {
-    text: `You are upset at the old man >:( What are you gonna do?`,
-    choices: [
-    ["Mog him", "Choice7"], ["Kill him","Choice8"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice4: {
+        text: `You are upset at the old man >:( What are you gonna do?`,
+        choices: [
+            ["Mog him", "Choice7"], ["Kill him", "Choice8"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice5: {
-    text: `He accepts your apology and now you have to decide what machine you want to use for your workout.`,
-    choices: [
-    ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004","Choice10"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice5: {
+        text: `He accepts your apology and now you have to decide what machine you want to use for your workout.`,
+        choices: [
+            ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004", "Choice10"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice6: {
-    text: `He becomes even more furious and punches you in the face`,
-    choices: [
-    ["Cry", "intro"], ["Take it like a man and scan in","Choice11"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice6: {
+        text: `He becomes even more furious and punches you in the face`,
+        choices: [
+            ["Cry", "intro"], ["Take it like a man and scan in", "Choice11"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
 Choice7: {
     text: ``,
@@ -568,97 +577,97 @@ Choice7: {
     valueAura: 100 // Set valueAura here
 },
 
-Choice8: {
-    text: `He kicks your butt and mogs you`,
-    choices: [
-    ["Game Over. GG's!! :)", "intro"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice8: {
+        text: `He kicks your butt and mogs you`,
+        choices: [
+            ["Game Over. GG's!! :)", "intro"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
 
-Choice9: {
-    text: `Which ingredients will you use for the gains?`,
-    choices: [
-    ["Benadryl", "Choice12"], ["Mystical container contents","Choice12"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice9: {
+        text: `Which ingredients will you use for the gains?`,
+        choices: [
+            ["Benadryl", "Choice12"], ["Mystical container contents", "Choice12"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice10: {
-    text: `Which ingredients will you use for the gains?`,
-    choices: [
-    ["Meat Smoothie", "Choice12"], ["Vicodin","Choice12"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice10: {
+        text: `Which ingredients will you use for the gains?`,
+        choices: [
+            ["Meat Smoothie", "Choice12"], ["Vicodin", "Choice12"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice11: {
-    text: `You muscle through it because you're a beast. Which machine do you want to work out at?`,
-    choices: [
-    ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004","Choice10"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice11: {
+        text: `You muscle through it because you're a beast. Which machine do you want to work out at?`,
+        choices: [
+            ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004", "Choice10"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice12: {
-    text: `You do an intense workout and feel the gains!!!`,
-    choices: [
-    ["Next", "Choice13"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice12: {
+        text: `You do an intense workout and feel the gains!!!`,
+        choices: [
+            ["Next", "Choice13"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice13: {
-    text: `You finish working out and you notice a buff cosplaying dude working out.`,
-    choices: [
-    ["Approach him...", "Choice14"]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice13: {
+        text: `You finish working out and you notice a buff cosplaying dude working out.`,
+        choices: [
+            ["Approach him...", "Choice14"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice14: {
-    text: ``,
-    choices: [
-    ["", ""], ["",""]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice14: {
+        text: ``,
+        choices: [
+            ["", ""], ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice15: {
-    text: ``,
-    choices: [
-    ["", ""], ["",""]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice15: {
+        text: ``,
+        choices: [
+            ["", ""], ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-Choice16: {
-    text: ``,
-    choices: [
-    ["", ""], ["",""]
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice16: {
+        text: ``,
+        choices: [
+            ["", ""], ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
-//Costco
+    //Costco
 
 Costco1: {
     text: `You arrive at Costco. What do you want to do?`,
@@ -810,17 +819,17 @@ Costco: {
     valueAura: 100 // Set valueAura here
 },
 
-// Ending
+    // Ending1
 
-EndStart: {
-    text: `"You arrive at the interview. You are ready to take on the world! And this interview."`,
-    choices: [
-    ["", ""],
-    ],
-    image: "pics/.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    End1Start: {
+        text: `"You arrive at the interview. You are ready to take on the world! And this interview."`,
+        choices: [
+            ["", ""],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 };
 function makeButton(btnText, choice) {
     let button = document.createElement("button");
@@ -839,9 +848,39 @@ function showScene(pageKey) {
 
 function buildStory(text) {
     let storyItem = document.createElement("p");
-    storyItem.innerText = text;
+    storyItem.style.whiteSpace = "pre-wrap";
     storyContainer.appendChild(storyItem);
+
+    let index = 0;
+    const totalDuration = 900; // ms
+    const interval = totalDuration / text.length;
+    let timeoutId = null;
+
+    function typeNextChar() {
+        if (index < text.length) {
+            storyItem.innerText += text.charAt(index);
+            index++;
+            timeoutId = setTimeout(typeNextChar, interval);
+        }
+    }
+
+    function skipTyping() {
+        clearTimeout(timeoutId);
+        storyItem.innerText = text;
+        cleanup();
+    }
+
+    function cleanup() {
+        document.removeEventListener("keydown", skipTyping);
+        document.removeEventListener("mousedown", skipTyping);
+    }
+
+    document.addEventListener("keydown", skipTyping);
+    document.addEventListener("mousedown", skipTyping);
+
+    typeNextChar();
 }
+
 
 function showStory() {
     const currentPage = history[history.length - 1];
