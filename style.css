@@ -11,41 +11,40 @@
     height: 100vh;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(0, 0, 0);
 }
 
-h1{
-    color: blue; 
-    font-size: 3em; 
-    text-align: center; 
+h1 {
+    color: blue;
+    font-size: 3em;
+    text-align: center;
     margin: 0;
 }
 
-h2, #buttons{
-    text-align: center;;
-}
+h2,
 
-*{
+* {
     color: white;
 }
 
-h2{
-    color:red;
+h2 {
+    color: red;
 }
 
 
 #story-image {
-    width: 600px;
+    width: auto;
     height: 660px;
     display: block;
-    margin:  auto;
+    margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 #image-container {
     width: 80%;
     display: flex;
@@ -57,8 +56,9 @@ h2{
     padding: 0;
 }
 
-p:nth-last-of-type(1){
-   font-weight: bold; /* Makes the latest story event bold */
+p:nth-last-of-type(1) {
+    font-weight: bold;
+    /* Makes the latest story event bold */
 }
 
 .unda {
@@ -84,7 +84,7 @@ p:nth-last-of-type(1){
 button {
     margin: 10px;
     border: 1px solid white;
-    color:black;
+    color: black;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -93,15 +93,16 @@ button {
     border-radius: 2px;
 }
 
+
 button:hover {
     background-color: rgb(174, 174, 174);
     border: 1px solid white;
 }
 
-#story{
+#story {
     font-size: 1.5em;
-    border:2px solid rgb(255, 255, 255);
-    margin-bottom:10px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
     width: 80%;
     display: flex;
     align-items: center;
@@ -109,13 +110,13 @@ button:hover {
 
 }
 
-#story p{
+#story p {
     margin-left: 20px;
-    color:white;
+    color: white;
     border-color: white;
 }
 
-.title{
+.title {
     font-size: 6em;
     font-weight: bold;
     color: blue;
@@ -123,7 +124,8 @@ button:hover {
 }
 
 #qte-box {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -177,7 +179,8 @@ button:hover {
 }
 
 /* Fail and Win Message Styling */
-#qte-box #fail-message, #qte-box #win-message {
+#qte-box #fail-message,
+#qte-box #win-message {
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
@@ -205,10 +208,12 @@ button:hover {
 
 /* Hide game elements until the game starts */
 #qte-box {
-    display: none; /* Keep hidden initially */
+    display: none;
+    /* Keep hidden initially */
 }
 
-#inventory, #shop {
+#inventory,
+#shop {
     display: none;
 }
 
@@ -228,29 +233,32 @@ button:hover {
 
 #inventory-list {
     display: flex;
-    gap: 15px; /* optional spacing between items */
+    gap: 15px;
+    /* optional spacing between items */
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
 
-ul{
+ul {
     display: inline;
 }
 
 #inventory {
-    display: none; /* Hide initially */
+    display: none;
+    /* Hide initially */
 }
 
-#shop-items li, #inventory-list li {
+#shop-items li,
+#inventory-list li {
     margin: 5px;
     list-style-type: none;
 }
 
-#shop.inv{
+#shop.inv {
     position: absolute;
-    transform: translate(0%, 80%);
+    transform: translate(0%, 0%);
 }
 
 #scoreboard {
@@ -259,10 +267,50 @@ ul{
     left: 0;
     right: 0;
     text-align: center;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 18px;
     padding: 10px;
     font-family: Arial, sans-serif;
     z-index: 1000;
+    width: 40%;
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}
+
+#start-qte{
+    transform: translate(0%,0%);
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid white;
+}
+
+#back-to-intro {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#back-to-intro:hover {
+    background-color: rgb(174, 174, 174);
+    border: 1px solid white;
+}
+
+#buttons button:last-of-type{
+    display: none;
 }
