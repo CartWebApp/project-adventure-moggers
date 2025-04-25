@@ -920,3 +920,212 @@ function showStory() {
 showStory();
 
 /// QTE GAME
+let qteKeyHandler = null;
+
+function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
+    container.innerHTML = '';
+
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    let currentRound = 0, score = 0, gameOver = false;
+    let timerInterval = null;
+    let targetLetter = '';
+
+    const qteBox = document.createElement('div');
+    const letterDisplay = document.createElement('h2');
+    const statusDisplay = document.createElement('p');
+    const scoreDisplay = document.createElement('p');
+    const timerDisplay = document.createElement('p');
+
+    qteBox.id = 'qte-box';
+    container.append(qteBox, letterDisplay, statusDisplay, scoreDisplay, timerDisplay);
+
+    function startRound() {
+        if (currentRound >= totalRounds) return endGame(true);
+        currentRound++;
+        targetLetter = letters[Math.floor(Math.random() * letters.length)];
+        letterDisplay.textContent = `Press: ${targetLetter}`;
+        statusDisplay.textContent = `Round ${currentRound} of ${totalRounds}`;
+    }
+
+    qteKeyHandler = function (e) {
+        if (gameOver) return;
+        if (e.key.toUpperCase() === targetLetter) {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            startRound();
+        }
+    };
+
+    document.addEventListener("keydown", qteKeyHandler);
+
+    function endGame(won) {
+        gameOver = true;
+        clearInterval(timerInterval);
+        document.removeEventListener("keydown", qteKeyHandler);
+        qteKeyHandler = null;
+
+        const endText = document.createElement('h1');
+        endText.style.fontSize = '4rem';
+        endText.style.color = won ? 'green' : 'red';
+        endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
+        qteBox.innerHTML = '';
+        qteBox.appendChild(endText);
+    }
+
+    // Timer
+    let timeRemaining = timeLimit;
+    timerDisplay.textContent = `Time: ${timeRemaining}`;
+    timerInterval = setInterval(() => {
+        timeRemaining--;
+        timerDisplay.textContent = `Time: ${timeRemaining}`;
+        if (timeRemaining <= 0) {
+            endGame(false);
+        }
+    }, 1000);
+
+    startRound();
+}
+
+const shopItems = [
+    { name: "Protein Shake", cost: 5, aura: 10 },
+    { name: "Drip Jacket", cost: 10, aura: 15 },
+    { name: "Job Application", cost: 15, aura: 20 },
+    { name: "Dumbells", cost: 25, aura: 25 },
+    { name: "Hair Trimmer", cost: 50, aura: 30 },
+    { name: "Cool Shades", cost: 100, aura: 40 },
+    { name: "Deoderant", cost: 150, aura: 45 },
+    { name: "Raw Meat", cost: 300, aura: 60 },
+    { name: "Eggs", cost: 600, aura: 75 },
+    { name: "Jordans", cost: 500, aura: 70 },
+    { name: "Teacher Referral", cost: 550, aura: 80 },
+    { name: "Steroids", cost: 700, aura: 100 },
+    { name: "Plastic Surgery", cost: 1000, aura: 150 },
+    { name: "Harvard Degree", cost: 3000, aura: 200 },
+    { name: "Miku Voicebank", cost: 5000, aura: 300 },
+];
+
+const inventoryList = document.getElementById("inventory-list");
+const shopList = document.getElementById("shop-items");
+const shopContainer = document.getElementById("shop");
+
+function renderShop() {
+    shopList.innerHTML = '';
+    shopItems.forEach(item => {
+        const li = document.createElement("li");
+        const btn = document.createElement("button");
+
+        btn.innerText = `${item.name} - ${item.cost} Rizzpoints - ${item.aura} Aurapoints`;
+        btn.addEventListener("click", () => {
+            if (state.valueRizz >= item.cost) {
+                // Deduct the cost from Rizzpoints
+                state.valueRizz -= item.cost;
+                // Add item to the player's inventory
+                const newItem = document.createElement("li");
+                newItem.innerText = item.name;
+                inventoryList.appendChild(newItem);
+                // Award additional Aurapoints
+                state.valueAura += item.aura;
+                alert(`You bought a ${item.name}! You also received ${item.aura} Aurapoints!`);
+                console.log("New Rizzpoint balance:", state.valueRizz);
+                console.log("New Aurapoint balance:", state.valueAura);
+            } else {
+                alert(`Not enough Rizzpoints!`);
+            }
+        });
+        updateScoreboard();
+
+        li.appendChild(btn);
+        shopList.appendChild(li);
+    });
+}
+
+// Universal key handler (QTE-aware)
+document.addEventListener("keydown", function (event) {
+    if (qteKeyHandler) return; // Skip if QTE is active
+
+    // Toggle inventory
+    if (event.key === "i" || event.key === "I") {
+        const inventory = document.getElementById("inventory");
+        inventory.style.display =
+            (inventory.style.display === "none" || inventory.style.display === "")
+                ? "flex"
+                : "none";
+    }
+
+    // Toggle shop
+    if (event.key === "s" || event.key === "S") {
+        const shop = document.getElementById("shop");
+        if (shop.style.display === "none" || shop.style.display === "") {
+            shop.style.display = "flex";
+            renderShop();
+        } else {
+            shop.style.display = "none";
+        }
+    }
+});
+
+document.getElementById("start-qte").addEventListener("click", function () {
+    // Assuming 'story' is the container for your story content
+    const storyContainer = document.getElementById("story");
+
+    // Start the QTE game
+    createQTEGame(storyContainer);
+});
+
+function createBackToIntroButton() {
+    const backBtn = document.createElement("button");
+    backBtn.innerText = "⬅️ Back to Intro";
+    backBtn.style.marginTop = "10px";
+    backBtn.addEventListener("click", function () {
+        history = ["intro"]; // Reset history to only include "intro"
+        showStory();         // Reload the intro scene
+    });
+
+    buttonContainer.appendChild(backBtn);
+}
+
+function showStory() {
+    const currentPage = history[history.length - 1];
+    storyContainer.innerHTML = "";
+    buttonContainer.innerHTML = "";
+    imageContainer.style.display = "none";
+
+    if (currentPage === "end1") {
+        state.valueRizz = 0;
+        state.valueAura = 0;
+        history = ["intro"];
+    }
+
+    buildStory(story[currentPage].text);
+
+    if (currentPage === "gangshyt") {
+        createQTEGame(document.getElementById("story"));
+    } else {
+        for (let choice of story[currentPage].choices) {
+            makeButton(choice[0], choice[1]);
+        }
+        createBackToIntroButton(); // <- add this to include the Back to Intro button
+    }
+
+    state.valueRizz += story[currentPage].valueRizz;
+    state.valueAura += story[currentPage].valueAura;
+    updateScoreboard();
+
+    if (story[currentPage].image) {
+        storyImage.src = story[currentPage].image;
+        storyImage.style.display = "block";
+        imageContainer.style.display = "block";
+    }
+
+    console.log("Accumulated Value Rizz:", state.valueRizz);
+    console.log("Accumulated Value Aura:", state.valueAura);
+}
+
+document.getElementById("back-to-intro").addEventListener("click", function () {
+    showScene("intro");
+});
+
+function updateScoreboard() {
+    const scoreboard = document.getElementById("scoreboard");
+    scoreboard.textContent = `Rizz: ${state.valueRizz} | Aura: ${state.valueAura}`;
+}
