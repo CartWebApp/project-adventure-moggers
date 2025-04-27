@@ -28,7 +28,7 @@ h1 {
     color: rgb(255, 255, 255);
     font-size: 3em;
     text-align: center;
-    transform: translate(0%, -10%);
+    transform: translate(0%, -0%);
 }
 
 h2 {
@@ -59,7 +59,7 @@ p:nth-last-of-type(1) {
 
 .unda {
     font-size: 0.60em;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .coolar {
@@ -112,4 +112,8 @@ a:hover {
 
 .fine {
     color: red
+}
+
+#instructions{
+    transform: translate(0%, -55%);
 }

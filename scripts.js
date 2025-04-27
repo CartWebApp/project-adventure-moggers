@@ -1122,7 +1122,11 @@ function showStory() {
 }
 
 document.getElementById("back-to-intro").addEventListener("click", function () {
-    showScene("intro");
+    state.valueRizz = 0;      // Reset Rizz
+    state.valueAura = 0;      // Reset Aura
+    history = ["intro"];      // Reset history
+    showStory();              // Reload the intro scene properly
+    updateScoreboard();       // Update the scoreboard display
 });
 
 function updateScoreboard() {

@@ -277,6 +277,7 @@ ul {
     margin: auto;
     width: 25%;
     padding: 10px;
+    transform: translate(170%, 0%);
 }
 
 #start-qte{
