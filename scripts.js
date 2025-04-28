@@ -29,7 +29,7 @@ const story = {
             ["Epic!!!", "barb1s"],
         ],
         image: "pics/barber.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barb1s: {
@@ -38,7 +38,7 @@ const story = {
             [`"She's just dandy, Jack."`, "barb1st"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barb1st: {
@@ -47,7 +47,7 @@ const story = {
             [`"Wifey says I need a job. I gotta get spiffy and quick! Any recomendations?"`, "barb1sts"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barb1sts: {
@@ -58,7 +58,7 @@ const story = {
             ["Dreads", "barbdreads"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barbtape: {
@@ -67,7 +67,7 @@ const story = {
             [`"Yes king"`, "barbtape1"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 5, // Set valueRizz here
+        valueRizz: 15, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barbtape1: {
@@ -76,7 +76,7 @@ const story = {
             ["Frickin' Sweet", "barbtape2"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 20 // Set valueAura here
     },
     barbtape2: {
@@ -85,7 +85,7 @@ const story = {
             [`"Le Epic"`, "barbtape3"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
     barbtape3: {
@@ -94,7 +94,7 @@ const story = {
             ["RAAHHHHHH", "barbtape4"],
         ],
         image: "pics/john.jpg",
-        valueRizz: 0, // Set valueRizz here
+        valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
@@ -104,7 +104,7 @@ const story = {
             ["Bruh", "barb2w"]
         ],
         image: "pics/jail.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 100
     },
     barb2w: {
@@ -114,7 +114,7 @@ const story = {
             ["Juggers", "barb4"]
         ],
         image: "pics/jail.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 0
     },
     barb3J: {
@@ -124,7 +124,7 @@ const story = {
             ["Assimilate", "barbj2"]
         ],
         image: "pics/image_3.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 100
     },
     mogleader: {
@@ -142,7 +142,7 @@ const story = {
             ["MY LUNGS???", "barbh0"]
         ],
         image: "pics/figure.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 75
     },
     barbh0: {
@@ -152,7 +152,7 @@ const story = {
             ["Tails", "barbh01"]
         ],
         image: "pics/figure.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 0
     },
     barbh01: {
@@ -171,7 +171,7 @@ const story = {
             ["Try to escape", "barbe"]
         ],
         image: "pics/scared.jpg",
-        valueRizz: 2000,
+        valueRizz: 4000,
         valueAura: 1000
     },
     barbe: {
@@ -180,25 +180,25 @@ const story = {
             ["That makes no sense", "barbe1"],
         ],
         image: "pics/phew.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 300
     },
     barbe1: {
         text: "Your creation of an escape got the Juggers off your tail. You run away and hitchhike back to the city.",
         choices: [
-            [`"Aw yeah!"`, "EndStart"],
+            [`"Aw yeah!"`, "End1Start"],
         ],
         image: "pics/phew.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 0
     },
     barbf: {
         text: "You manage to evade all the members of the Juggers and escape the prison in the brawl that ensued. You hitchhike back to the city",
         choices: [
-            [`"Aw yeah!"`, "Endstart"],
+            [`"Aw yeah!"`, "End1Start"],
         ],
         image: "pics/phew.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 200
     },
     barb4: {
@@ -208,7 +208,7 @@ const story = {
             ["Mog thier leader", "barbjug3"]
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 100
     },
     barbjug2: {
@@ -217,7 +217,7 @@ const story = {
             ["Hell naw", "barbjug3"],
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: -500
     },
     barbjug3: {
@@ -237,7 +237,7 @@ const story = {
             ["Gamblers", "gangshyt"]
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 2000
     },
     prisonjug1: {
@@ -245,53 +245,53 @@ const story = {
         choices: [
             ["Oh", "prisonjug2"],
         ],
-        image: "pics/.jpg",
-        valueRizz: 0,
+        image: "pics/grug.jpg",
+        valueRizz: 10,
         valueAura: 0
     },
     prisonjug2: {
         text: "Keyword: Try",//qte but you fail no matter what and when you do you just escape
         choices: [
-            [" ", "prisoinjug3"],
+            ["Oh no", "prisonjug3"],
         ],
-        image: "pics/.jpg",
-        valueRizz: 0,
+        image: "pics/grug.jpg",
+        valueRizz: 10,
         valueAura: 0
     },
     prisonjug3: {
         text: "You are failing.",//qte but you fail no matter what and when you do you just escape
         choices: [
-            [" ", "prisoinjug4"],
+            [" This aint good", "prisonjug4"],
         ],
-        image: "pics/.jpg",
-        valueRizz: 0,
+        image: "pics/grug.jpg",
+        valueRizz: 10,
         valueAura: -1000
     },
     prisonjug4: {
         text: "Badly.",//qte but you fail no matter what and when you do you just escape
         choices: [
-            ["Oh well", "prisoinjug5"],
+            ["Oh well", "prisonjug5"],
         ],
-        image: "pics/.jpg",
-        valueRizz: 0,
+        image: "pics/grug.jpg",
+        valueRizz: 10,
         valueAura: -10
     },
     prisonjug5: {
         text: "Maybe it's time to bail",//qte but you fail no matter what and when you do you just escape
         choices: [
-            ["Yeah maybe", "prisoinjug6"],
+            ["Yeah maybe", "prisonjug6"],
         ],
-        image: "pics/.jpg",
-        valueRizz: 0,
+        image: "pics/grug.jpg",
+        valueRizz: 10,
         valueAura: -5
     },
     prisonjug6: {
         text: "You sick your goons on the warden, and as hes tearing them apart you slip away outside the prison.",//qte but you fail no matter what and when you do you just escape
         choices: [
-            [`"That was close"`, "prisoinjug7"],
+            [`"That was close"`, "barbe1"],
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 0
     },
     gangshyt: {
@@ -300,7 +300,7 @@ const story = {
             ["Ight", "aftermath"]
         ],
         image: "pics/.jpg",
-        valueRizz: 0,
+        valueRizz: 10,
         valueAura: 50
     },
     aftermath: {
@@ -944,7 +944,73 @@ Costco: {
     // Ending1
 
     End1Start: {
-        text: `"You arrive at the interview. You are ready to take on the world! And this interview."`,
+        text: `"You arrive at the interview."`,
+        choices: [
+            [`"I have arrived at the interview. Time to go inside"`, "End1"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    End1: {
+        text: `"You want a job scrub? Then we gotta tussle first."`,
+        choices: [
+            [`"ig"`, "End2"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    End2: {
+        text: `"ohh you beat me heres the job"`,
+        choices: [
+            [`"Lit. imma go home now"`, "End3"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    End3: {
+        text: `"Did you get the job you bum?"`,
+        choices: [
+            [`"yuh"`, "End3"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    End3: {
+        text: `"Yay now we have two incomes"`,
+        choices: [
+            [`"lets have a kid"`, "end1"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+
+
+     // Ending2
+
+    End2Start: {
+        text: `"You arrive at the interview."`,
+        choices: [
+            ["", ""],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+        },
+
+    // Ending3
+
+    End3Start: {
+        text: `"You arrive at the interview."`,
         choices: [
             ["", ""],
         ],
@@ -952,7 +1018,10 @@ Costco: {
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
+
+
 };
+
 function makeButton(btnText, choice) {
     let button = document.createElement("button");
     button.innerHTML = btnText;
@@ -961,6 +1030,8 @@ function makeButton(btnText, choice) {
     button.addEventListener("click", function () {
         showScene(choice);
     });
+
+    
 }
 
 function showScene(pageKey) {
@@ -1003,41 +1074,6 @@ function buildStory(text) {
     typeNextChar();
 }
 
-
-function showStory() {
-    const currentPage = history[history.length - 1];
-    storyContainer.innerHTML = "";
-    buttonContainer.innerHTML = "";
-    imageContainer.style.display = "none";
-
-    if (currentPage === "end1") {
-        state.valueRizz = 0;
-        state.valueAura = 0;
-        history = ["intro"];
-    }
-
-    buildStory(story[currentPage].text);
-
-    if (currentPage === "gangshyt") {
-        createQTEGame(document.getElementById("story"));
-    } else {
-        for (let choice of story[currentPage].choices) {
-            makeButton(choice[0], choice[1]);
-        }
-    }
-
-    state.valueRizz += story[currentPage].valueRizz;
-    state.valueAura += story[currentPage].valueAura;
-
-    console.log("Accumulated Value Rizz:", state.valueRizz);
-    console.log("Accumulated Value Aura:", state.valueAura);
-
-    if (story[currentPage].image) {
-        storyImage.src = story[currentPage].image;
-        storyImage.style.display = "block";
-        imageContainer.style.display = "block";
-    }
-}
 
 showStory();
 
@@ -1113,17 +1149,17 @@ const shopItems = [
     { name: "Drip Jacket", cost: 10, aura: 15 },
     { name: "Job Application", cost: 15, aura: 20 },
     { name: "Dumbells", cost: 25, aura: 25 },
-    { name: "Hair Trimmer", cost: 50, aura: 30 },
-    { name: "Cool Shades", cost: 100, aura: 40 },
-    { name: "Deoderant", cost: 150, aura: 45 },
-    { name: "Raw Meat", cost: 300, aura: 60 },
-    { name: "Eggs", cost: 600, aura: 75 },
-    { name: "Jordans", cost: 500, aura: 70 },
-    { name: "Teacher Referral", cost: 550, aura: 80 },
-    { name: "Steroids", cost: 700, aura: 100 },
-    { name: "Plastic Surgery", cost: 1000, aura: 150 },
-    { name: "Harvard Degree", cost: 3000, aura: 200 },
-    { name: "Miku Voicebank", cost: 5000, aura: 300 },
+    { name: "Hair Trimmer", cost: 50, aura: 50 },
+    { name: "Cool Shades", cost: 100, aura: 100 },
+    { name: "Deoderant", cost: 150, aura: 125 },
+    { name: "Raw Meat", cost: 300, aura: 250 },
+    { name: "Eggs", cost: 600, aura: 360 },
+    { name: "Jordans", cost: 500, aura: 300 },
+    { name: "Teacher Referral", cost: 550, aura: 400 },
+    { name: "Steroids", cost: 700, aura: 500 },
+    { name: "Plastic Surgery", cost: 1000, aura: 1500 },
+    { name: "Harvard Degree", cost: 3000, aura: 2000 },
+    { name: "Miku Voicebank", cost: 5000, aura: 3000 },
 ];
 
 const inventoryList = document.getElementById("inventory-list");
@@ -1148,13 +1184,15 @@ function renderShop() {
                 // Award additional Aurapoints
                 state.valueAura += item.aura;
                 alert(`You bought a ${item.name}! You also received ${item.aura} Aurapoints!`);
+                
+                updateScoreboard(); // <<< MOVE THIS HERE, after Rizz and Aura change
+        
                 console.log("New Rizzpoint balance:", state.valueRizz);
                 console.log("New Aurapoint balance:", state.valueAura);
             } else {
                 alert(`Not enough Rizzpoints!`);
             }
         });
-        updateScoreboard();
 
         li.appendChild(btn);
         shopList.appendChild(li);
@@ -1199,8 +1237,12 @@ function createBackToIntroButton() {
     backBtn.innerText = "⬅️ Back to Intro";
     backBtn.style.marginTop = "10px";
     backBtn.addEventListener("click", function () {
-        history = ["intro"]; // Reset history to only include "intro"
-        showStory();         // Reload the intro scene
+        state.valueRizz = 0;      // Reset Rizz
+        state.valueAura = 0;      // Reset Aura
+        history = ["intro"];      // Reset history
+        inventoryList.innerHTML = ""; // <<< Reset inventory
+        showStory();              // Reload the intro scene properly
+        updateScoreboard();       // Update the scoreboard display
     });
 
     buttonContainer.appendChild(backBtn);
@@ -1208,9 +1250,14 @@ function createBackToIntroButton() {
 
 function showStory() {
     const currentPage = history[history.length - 1];
+
+    
     storyContainer.innerHTML = "";
     buttonContainer.innerHTML = "";
     imageContainer.style.display = "none";
+
+    console.log("Current page:", currentPage);  // Debugging line to see the current page
+   
 
     if (currentPage === "end1") {
         state.valueRizz = 0;
@@ -1222,31 +1269,52 @@ function showStory() {
 
     if (currentPage === "gangshyt") {
         createQTEGame(document.getElementById("story"));
+    } else if (currentPage === "barbe1") {
+        console.log("Barbe1 reached");
+
+        // Button to show depending on aura
+        if (state.valueAura >= 1000) {
+            console.log("Showing Button for Ending 3");
+            makeButton("Go to Ending 3", "End3Start");
+        } else if (state.valueAura >= 200) {
+            console.log("Showing Button for Ending 2");
+            makeButton("Go to Ending 2", "End2Start");
+        } else if (state.valueAura >= 50) {
+            console.log("Showing Button for Ending 1");
+            makeButton("Go to Ending 1", "End1Start");
+        }
     } else {
         for (let choice of story[currentPage].choices) {
             makeButton(choice[0], choice[1]);
         }
-        createBackToIntroButton(); // <- add this to include the Back to Intro button
+        createBackToIntroButton();
     }
 
+    // Update Rizz and Aura after scene
     state.valueRizz += story[currentPage].valueRizz;
     state.valueAura += story[currentPage].valueAura;
+
+    // Call updateScoreboard after values change
     updateScoreboard();
+
+    console.log("Accumulated Value Rizz:", state.valueRizz);
+    console.log("Accumulated Value Aura:", state.valueAura);
 
     if (story[currentPage].image) {
         storyImage.src = story[currentPage].image;
         storyImage.style.display = "block";
         imageContainer.style.display = "block";
     }
-
-    console.log("Accumulated Value Rizz:", state.valueRizz);
-    console.log("Accumulated Value Aura:", state.valueAura);
 }
+
+buttonContainer = document.getElementById("buttons");
+
 
 document.getElementById("back-to-intro").addEventListener("click", function () {
     state.valueRizz = 0;      // Reset Rizz
     state.valueAura = 0;      // Reset Aura
     history = ["intro"];      // Reset history
+    inventoryList.innerHTML = ""; // <<< Reset inventory
     showStory();              // Reload the intro scene properly
     updateScoreboard();       // Update the scoreboard display
 });
@@ -1255,3 +1323,5 @@ function updateScoreboard() {
     const scoreboard = document.getElementById("scoreboard");
     scoreboard.textContent = `Rizz: ${state.valueRizz} | Aura: ${state.valueAura}`;
 }
+
+console.log("Scoreboard element:", document.getElementById("scoreboard"));
