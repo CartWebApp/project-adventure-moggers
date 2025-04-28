@@ -315,3 +315,44 @@ ul {
 #buttons button:last-of-type{
     display: none;
 }
+
+
+@media  only screen and (max-width: 500px) {
+    .cool {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #story-image {
+        width: 100%;
+    }
+
+    #image-container {
+        width: 100%;
+    }
+
+    #qte-box {
+        width: 90%;
+    }
+
+    #scoreboard {
+        width: 200px;
+        font-size: 16px;
+        transform: translate(40%, -2145%);
+    }
+    
+    #back-to-intro {
+        transform: translate(-20%, -2320%);
+    }
+
+    #story p{
+        font-size: .8em
+    }
+
+    #story {
+        width: 100%;
+    }
+}
