@@ -50,6 +50,7 @@ const story = {
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
+
     barb1sts: {
         text: `"Do I? Hell yes I do brother. Heres what I got on the menu today fine fella. Take your pick!"`,
         choices: [
