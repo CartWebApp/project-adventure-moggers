@@ -532,11 +532,11 @@ ul {
     #scoreboard {
         width: 200px;
         font-size: 16px;
-        transform: translate(40%, -1750%);
+        transform: translate(40%, -1950%);
     }
 
     #back-to-intro {
-        transform: translate(-20%, -1910%);
+        transform: translate(-20%, -2110%);
     }
 
     #story p {
@@ -551,8 +551,4 @@ ul {
     #buttons {
         transform: translate(0%, 0%);
     }
-
-    *{
-    transform: translate(0%, 3%);
- }
 }
