@@ -752,7 +752,7 @@ Costco8: {
 Costco9: {
     text: `You walk out of the fire slowly and confidently, your aura is radiating making everybody who witnessed the explosing awestruck, as you're walking away, one final massive explosion happens and you DON'T turn back.`,
     choices: [
-    ["look over and notice a man who stands out from the crown looking at you... almost like he's proud of you.", "Costco15"],
+    ["look over and notice a man who stands out from the crowd looking at you... almost like he's proud of you.", "Costco15"],
     ],
     image: "pics/.jpg",
     valueRizz: 100, // Set valueRizz here
@@ -792,15 +792,135 @@ Costco12: {
 Costco13: {
     text: `You run out of Costco. Where do you go?`,
     choices: [
-    ["Go to the barb", ""], ["Go to the Gym", ""],
+    ["Go to the barb", "barb1"], ["Go to the Gym", "Gym"],
     ],
     image: "pics/.jpg",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
 
-Costco: {
-    text: ``,
+Costco14: {
+    text: `As you celebrate your free bake, an old man notices that you just gave out 5 BIG BOOMS!!! He walks over and comes to see what the commotion is`,
+    choices: [
+    ["Await his arrival", "Costco19"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco15: {
+    text: `The old man approaches you and compliments your fricken epicness. It was so fricken cool how you walked out fo the fire and didnt look back and the man wants to compliment you on it.`,
+    choices: [
+    ["Reach out and shake the mans hand", "Costco20"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco16: {
+    text: `You thank the man and shake his hand, his grip strength is incredible.`,
+    choices: [
+    ["Compliment the incredible grip of the handshake", "Costco21"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco17: {
+    text: `You greet the man and he compliments your power, he is suprised that you destroyed the pump by just grabbing it and offers to train you in his ways`,
+    choices: [
+    ["Gratefully accept his offer", "CostcoM"], //come back and change this to whichever option is the "meet your mentor" option
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco18: {
+    text: `While trying to run out of the store, you're stopped by a wall of policemen all armed and ready. They will do whatever it takes to stop you.`,
+    choices: [
+    ["Comply", "barb2w"], ["Yell for help", "CostcoM"]
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco19: {
+    text: `The old man, who was just buying adult diapers 5 minutes ago, comes over to greet you and wants you to show him your totally epic 5 BOOMS Chicken Bake.`,
+    choices: [
+    ["Show him the Chicken Bake you won and offer him a taste", "Costco22"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco20: {
+    text: `As you're shaking the mans hand you are appalled at his incredible grip strength.`,
+    choices: [
+    ["Compliment his grip strength", "Costco23"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco21: {
+    text: `You compliment the mans incredible grip`,
+    choices: [
+    ["Ask to learn his ways and get stronger from his teachings", "CostcoM"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco22: {
+    text: `The man take you up on your offer and LOVES the Chicken Bake, he shakes your hand and you can feel the amount of POWER in his grip`,
+    choices: [
+    ["Ask him to teach you his ways to get stronger", "CostcoM"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+Costco23: {
+    text: `You are enthralled by his grip strength and compliment him, he offers to teach you how to get stronger!`,
+    choices: [
+    ["Accept his offer gratefully accept his offer to train you", "CostcoM"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM: {
+    text: `You have begun to train under your new incredible adult diaper wearing shredded old man mentor!!!`,
+    choices: [
+    ["Yahooo!!!", "CostcoM1"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM1: {
+    text: `Now that you have a teacher you wonder what exactly the first steps at becoming like him are?`,
+    choices: [
+    ["Ask him exactly what you have to do first to become a better version of yourself", "CostcoM2"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM2: {
+    text: `The old man thinks about what you can do for a moment. He ultimately decides to give you 2 options, you can either overcome your fear of trying new things by eating the new double chunk chocolate cookie, OR you can `,
     choices: [
     ["", ""],
     ],
@@ -818,6 +938,8 @@ Costco: {
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
+
+
 
     // Ending1
 
