@@ -117,3 +117,37 @@ a:hover {
 #instructions{
     transform: translate(0%, -55%);
 }
+
+@media  only screen and (max-width: 500px) {
+
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        transform: translate(4%, 0%);
+    }
+    .jim{
+        width: 100%;
+        height: auto;
+        margin:0
+    }
+
+    .butt-styling{
+    padding: 5px;
+    }
+
+    .unda{
+        margin:0
+    }
+
+    .cool{
+        transform: translate(4%, -7%);
+    }
+
+    #instructions{
+        transform: translate(0%, -0%);
+    }
+}
