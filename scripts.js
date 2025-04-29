@@ -291,7 +291,7 @@ const story = {
         choices: [
             [`"That was close"`, "barbe1"],
         ],
-        image: "pics/.jpg",
+        image: "pics/GRUG.png",
         valueRizz: 10,
         valueAura: 0
     },
@@ -921,7 +921,57 @@ CostcoM1: {
 },
 
 CostcoM2: {
-    text: `The old man thinks about what you can do for a moment. He ultimately decides to give you 2 options, you can either overcome your fear of trying new things by eating the new double chunk chocolate cookie, OR you can `,
+    text: `The old man thinks about what you can do for a moment. He ultimately decides to give you 2 options, you can either overcome your fear of trying new things by eating the new double chunk chocolate cookie, OR you can suck up your pride and apologize to the employee`,
+    choices: [
+    ["You cant sacrifice your pride and you decide to try the cookie", "CostcoM3"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM3: {
+    text: `You go to buy the cookie`,
+    choices: [
+    ["Purchase cookie", "CostcoM4"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM4: {
+    text: `You go back to the old man and you show him that you have acquired the cookie!`,
+    choices: [
+    ["Eat it", "CostcoM5"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM5: {
+    text: `You devour the cookie and you feel the power of the cookie coursing through your veins`,
+    choices: [
+    ["It wasn't power... You now desperatly need to use the restroom", "CostcoM6"],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoM6: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: -10000, // Set valueRizz here
+    valueAura: -10000 // Set valueAura here
+},
+
+Costco: {
+    text: ``,
     choices: [
     ["", ""],
     ],
@@ -940,7 +990,15 @@ Costco: {
     valueAura: 100 // Set valueAura here
 },
 
-
+Costco: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.jpg",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
 
     // Ending1
 
