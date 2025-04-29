@@ -28,7 +28,7 @@ const story = {
         choices: [
             ["Epic!!!", "barb1s"],
         ],
-        image: "pics/barber.jpg",
+        image: "pics/mikushop.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -76,7 +76,7 @@ const story = {
         choices: [
             ["Frickin' Sweet", "barbtape2"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/jimfade.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 20 // Set valueAura here
     },
@@ -124,7 +124,7 @@ const story = {
             ["Mog their leader", "mogleader"],
             ["Assimilate", "barbj2"]
         ],
-        image: "pics/image_3.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 10,
         valueAura: 100
     },
@@ -133,7 +133,7 @@ const story = {
         choices: [
             ["I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE I DON'T WANT TO DIE ", "end1"],
         ],
-        image: "pics/ultrakill-death.gif",
+        image: "pics/loogie.png",
         valueRizz: -10025,
         valueAura: -10000
     },
@@ -208,7 +208,7 @@ const story = {
             ["Assimilate", "barbjug2"],
             ["Mog thier leader", "barbjug3"]
         ],
-        image: "pics/.jpg",
+        image: "pics/engi.jpg",
         valueRizz: 10,
         valueAura: 100
     },
@@ -217,7 +217,7 @@ const story = {
         choices: [
             ["Hell naw", "barbjug3"],
         ],
-        image: "pics/.jpg",
+        image: "pics/engi.jpg",
         valueRizz: 10,
         valueAura: -500
     },
@@ -227,7 +227,7 @@ const story = {
             ["Jug the prison", "prisonjug"],
             ["Live out the rest of your days doing that you love", "end1"] //change
         ],
-        image: "pics/.jpg",
+        image: "pics/jimgi.png",
         valueRizz: 100,
         valueAura: 1000
     },
@@ -237,7 +237,7 @@ const story = {
             ["Warden", "prisonjug1"],
             ["Gamblers", "gangshyt"]
         ],
-        image: "pics/.jpg",
+        image: "pics/jimgi.png",
         valueRizz: 10,
         valueAura: 2000
     },
@@ -1054,7 +1054,7 @@ Costco: {
 
 
 
-     // Ending2
+     // Ending2 //gym ending
 
     End2Start: {
         text: `"You arrive at the interview."`,
@@ -1066,7 +1066,7 @@ Costco: {
         valueAura: 0 // Set valueAura here
         },
 
-    // Ending3
+    // Ending3 //costco ending
 
     End3Start: {
         text: `"You arrive at the interview."`,
