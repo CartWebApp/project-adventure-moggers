@@ -85,7 +85,7 @@ const story = {
         choices: [
             [`"Le Epic"`, "barbtape3"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/jimfade.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -94,7 +94,7 @@ const story = {
         choices: [
             ["RAAHHHHHH", "barbtape4"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/barber.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -114,7 +114,7 @@ const story = {
             ["Gamblers", "barb3J"],
             ["Juggers", "barb4"]
         ],
-        image: "pics/jail.jpg",
+        image: "pics/prison.jpg",
         valueRizz: 10,
         valueAura: 0
     },
@@ -142,26 +142,26 @@ const story = {
         choices: [
             ["MY LUNGS???", "barbh0"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 10,
         valueAura: 75
     },
     barbh0: {
-        text: "Call it, pretty boy.",
+        text: `"Call it, pretty boy."`,
         choices: [
             ["Heads", "barbh01"],
             ["Tails", "barbh01"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 10,
         valueAura: 0
     },
     barbh01: {
-        text: "Rats.",
+        text: "Mama Mia.",
         choices: [
             ["ez", "barbh"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 200,
         valueAura: 500
     },
@@ -171,7 +171,7 @@ const story = {
             ["Fight them all", "barbf"],
             ["Try to escape", "barbe"]
         ],
-        image: "pics/scared.jpg",
+        image: "pics/jimcry.png",
         valueRizz: 4000,
         valueAura: 1000
     },
@@ -180,7 +180,7 @@ const story = {
         choices: [
             ["That makes no sense", "barbe1"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 300
     },
@@ -189,7 +189,7 @@ const story = {
         choices: [
             [`"Aw yeah!"`, "End1Start"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 0
     },
@@ -198,7 +198,7 @@ const story = {
         choices: [
             [`"Aw yeah!"`, "End1Start"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 200
     },
@@ -1055,7 +1055,7 @@ Costco: {
         choices: [
             [`"Honey, I'm hoooooome"`, "End31"],
         ],
-        image: "pics/ricard.png",
+        image: "pics/path.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1101,7 +1101,7 @@ Costco: {
         choices: [
             [`Hell yeah`, "end1"],
         ],
-        image: "pics/lf.png",
+        image: "pics/lf2.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1396,14 +1396,15 @@ function showStory() {
 
     // Show main menu button if we're on the intro page
     if (currentPage === "intro") {
-        const returnBtn = document.createElement("button");
-        returnBtn.innerText = "🏠 Return to Main Menu";
-        returnBtn.style.marginTop = "10px";
-        returnBtn.addEventListener("click", () => {
-            window.location.href = "index.html";
-        });
-        buttonContainer.appendChild(returnBtn);
-    }
+    const returnBtn = document.createElement("button");
+    returnBtn.innerText = "Return to Main Menu";
+    returnBtn.className = "returnhome"; // <-- Add this line
+    returnBtn.style.marginTop = "10px";
+    returnBtn.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+    buttonContainer.appendChild(returnBtn);
+}
 
     if (currentPage === "end1") {
         state.valueRizz = 0;
