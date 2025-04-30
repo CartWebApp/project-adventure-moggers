@@ -1045,7 +1045,7 @@ Costco: {
         choices: [
             [`"Lit. imma go home now"`, "End3"],
         ],
-        image: "pics/ricard.png",
+        image: "pics/path.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
