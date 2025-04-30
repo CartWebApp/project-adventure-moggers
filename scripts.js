@@ -298,19 +298,37 @@ const story = {
     gangshyt: {
         text: "You decide take on the rival gang. You wage war on the Gamblers.", //qtes 
         choices: [
+            ["bring it on", "aftermath"]
+        ],
+        image: "pics/gamble.png",
+        valueRizz: 10,
+        valueAura: 50
+    },
+    /* gangshytqte: {
+        text: "you win!.", //qtes 
+        choices: [
             ["Ight", "aftermath"]
         ],
         image: "pics/.jpg",
         valueRizz: 10,
         valueAura: 50
-    },
+    }, */
     aftermath: {
         text: "After winning the war, you indoctrinate all the Gamblers into your ranks of goons. Do you escap with sheer numbers or live out the rest of your days as top dog in this prison?",
         choices: [
-            ["Jug", "end1"],
+            ["Jug", "jugending"],
             ["escape", "EndStart"]
         ],
-        image: "pics/.jpg",
+        image: "pics/dog.gif",
+        valueRizz: 0,
+        valueAura: 100
+    },
+    jugending: {
+        text: "You decide to jug the prison and all your goons start laying waste to the place, and in the ruckuss you make your escape and hitchhike back to the city.",
+        choices: [
+            ["Lit", "End1Start"],
+        ],
+        image: "pics/dog.gif",
         valueRizz: 0,
         valueAura: 100
     },
@@ -1139,7 +1157,10 @@ showStory();
 /// QTE GAME
 let qteKeyHandler = null;
 
-function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
+state.qteCompleted = false;
+
+
+function createQTEGame(container, totalRounds = 10, timeLimit = 10, onComplete = () => {}) {
     container.innerHTML = '';
 
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -1152,6 +1173,7 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
     const statusDisplay = document.createElement('p');
     const scoreDisplay = document.createElement('p');
     const timerDisplay = document.createElement('p');
+    
 
     qteBox.id = 'qte-box';
     container.append(qteBox, letterDisplay, statusDisplay, scoreDisplay, timerDisplay);
@@ -1166,12 +1188,26 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
 
     qteKeyHandler = function (e) {
         if (gameOver) return;
+    
         if (e.key.toUpperCase() === targetLetter) {
             score++;
             scoreDisplay.textContent = `Score: ${score}`;
             startRound();
-        }
-    };
+        } else {
+            timeRemaining -= 0.5;
+            if (timeRemaining < 0) timeRemaining = 0;
+            timerDisplay.textContent = `Time: ${timeRemaining.toFixed(1)}`;
+        
+            // Flash red
+            timerDisplay.style.color = 'red';
+            setTimeout(() => {
+                timerDisplay.style.color = ''; // Revert to default
+            }, 150);
+        
+            if (timeRemaining <= 0) {
+                endGame(false);
+            }
+        }};
 
     document.addEventListener("keydown", qteKeyHandler);
 
@@ -1187,21 +1223,28 @@ function createQTEGame(container, totalRounds = 10, timeLimit = 10) {
         endText.textContent = won ? '🎉 YOU WIN!' : '❌ YOU LOSE!';
         qteBox.innerHTML = '';
         qteBox.appendChild(endText);
+
+        // Restore story after short delay
+        setTimeout(() => {
+            onComplete();  // Re-show story after QTE ends
+        }, 1500);
     }
 
     // Timer
     let timeRemaining = timeLimit;
-    timerDisplay.textContent = `Time: ${timeRemaining}`;
-    timerInterval = setInterval(() => {
-        timeRemaining--;
-        timerDisplay.textContent = `Time: ${timeRemaining}`;
-        if (timeRemaining <= 0) {
-            endGame(false);
-        }
-    }, 1000);
+timerDisplay.textContent = `Time: ${timeRemaining.toFixed(1)}`;
+timerInterval = setInterval(() => {
+    timeRemaining -= 0.1;
+    timerDisplay.textContent = `Time: ${timeRemaining.toFixed(1)}`;
+    if (timeRemaining <= 0) {
+        endGame(false);
+    }
+}, 100);
 
     startRound();
 }
+
+
 
 const shopItems = [
     { name: "Protein Shake", cost: 5, aura: 10 },
@@ -1326,8 +1369,25 @@ function showStory() {
 
     buildStory(story[currentPage].text);
 
-    if (currentPage === "gangshyt") {
-        createQTEGame(document.getElementById("story"));
+    if (currentPage === "gangshytqte") {
+        if (!state.qteCompleted) {
+            state.qteCompleted = true;
+            if (story[currentPage].image) {
+                storyImage.src = story[currentPage].image;
+                storyImage.style.display = "block";
+                imageContainer.style.display = "block";
+            }
+            
+            createQTEGame(document.getElementById("story"), 10, 10, () => {
+                // QTE complete — now manually create buttons and back button
+                const choices = story[currentPage].choices;
+                for (let choice of choices) {
+                    makeButton(choice[0], choice[1]);
+                }
+                createBackToIntroButton();
+            });
+            return;
+        }
     } else if (currentPage === "barbe1") {
         console.log("Barbe1 reached");
 
