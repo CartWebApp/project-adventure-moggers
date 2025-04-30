@@ -28,7 +28,7 @@ const story = {
         choices: [
             ["Epic!!!", "barb1s"],
         ],
-        image: "pics/mikushop.png",
+        image: "pics/mikushop.jpg",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
