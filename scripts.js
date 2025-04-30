@@ -85,7 +85,7 @@ const story = {
         choices: [
             [`"Le Epic"`, "barbtape3"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/jimfade.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -94,7 +94,7 @@ const story = {
         choices: [
             ["RAAHHHHHH", "barbtape4"],
         ],
-        image: "pics/john.jpg",
+        image: "pics/barber.png",
         valueRizz: 10, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -114,7 +114,7 @@ const story = {
             ["Gamblers", "barb3J"],
             ["Juggers", "barb4"]
         ],
-        image: "pics/jail.jpg",
+        image: "pics/prison.jpg",
         valueRizz: 10,
         valueAura: 0
     },
@@ -142,26 +142,26 @@ const story = {
         choices: [
             ["MY LUNGS???", "barbh0"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 10,
         valueAura: 75
     },
     barbh0: {
-        text: "Call it, pretty boy.",
+        text: `"Call it, pretty boy."`,
         choices: [
             ["Heads", "barbh01"],
             ["Tails", "barbh01"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 10,
         valueAura: 0
     },
     barbh01: {
-        text: "Rats.",
+        text: "Mama Mia.",
         choices: [
             ["ez", "barbh"]
         ],
-        image: "pics/figure.jpg",
+        image: "pics/luigi-casino-new-super-mario-bros-ds.png",
         valueRizz: 200,
         valueAura: 500
     },
@@ -171,7 +171,7 @@ const story = {
             ["Fight them all", "barbf"],
             ["Try to escape", "barbe"]
         ],
-        image: "pics/scared.jpg",
+        image: "pics/jimcry.png",
         valueRizz: 4000,
         valueAura: 1000
     },
@@ -180,7 +180,7 @@ const story = {
         choices: [
             ["That makes no sense", "barbe1"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 300
     },
@@ -189,7 +189,7 @@ const story = {
         choices: [
             [`"Aw yeah!"`, "End1Start"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 0
     },
@@ -198,7 +198,7 @@ const story = {
         choices: [
             [`"Aw yeah!"`, "End1Start"],
         ],
-        image: "pics/phew.jpg",
+        image: "pics/pri.png",
         valueRizz: 10,
         valueAura: 200
     },
@@ -278,7 +278,7 @@ const story = {
         valueAura: -10
     },
     prisonjug5: {
-        text: "Maybe it's time to bail",//qte but you fail no matter what and when you do you just escape
+        text: "Maybe it's time to bail.",//qte but you fail no matter what and when you do you just escape
         choices: [
             ["Yeah maybe", "prisonjug6"],
         ],
@@ -328,7 +328,7 @@ const story = {
         choices: [
             ["Lit", "End1Start"],
         ],
-        image: "pics/dog.gif",
+        image: "pics/pri.png",
         valueRizz: 0,
         valueAura: 100
     },
@@ -434,7 +434,7 @@ const story = {
     end1: {
         text: "GG!",
         choices: [
-            ["k", "intro"] // Option to restart the game from the beginning
+            ["Restart", "intro"] // Option to restart the game from the beginning
         ],
         image: "pics/end.png",
         valueRizz: 0,
@@ -1073,9 +1073,9 @@ Costco: {
     End1Start: {
         text: `"You arrive at the interview."`,
         choices: [
-            [`"I have arrived at the interview. Time to go inside"`, "End1"],
+            [`"I have arrived at the interview. Time to go inside."`, "End1"],
         ],
-        image: "pics/.jpg",
+        image: "pics/maxresdefault.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1083,9 +1083,9 @@ Costco: {
     End1: {
         text: `"You want a job scrub? Then we gotta tussle first."`,
         choices: [
-            [`"ig"`, "End2"],
+            [`"K"`, "End2"],
         ],
-        image: "pics/.jpg",
+        image: "pics/ricard.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1095,31 +1095,66 @@ Costco: {
         choices: [
             [`"Lit. imma go home now"`, "End3"],
         ],
-        image: "pics/.jpg",
+        image: "pics/path.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
     End3: {
+        text: `You walk home with your newly found employment. Ready to finally please your wife with the news that you are no longer a roblox bum.`,
+        choices: [
+            [`"Honey, I'm hoooooome"`, "End31"],
+        ],
+        image: "pics/path.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    End31: {
         text: `"Did you get the job you bum?"`,
         choices: [
-            [`"yuh"`, "End3"],
+            [`"Yeah look!"`, "End312"],
         ],
-        image: "pics/.jpg",
+        image: "pics/wife.webp",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
-
-    End3: {
-        text: `"Yay now we have two incomes"`,
+    End312: {
+        text: `"Oh."`,
         choices: [
-            [`"lets have a kid"`, "end1"],
+            [`"..."`, "End30"],
         ],
-        image: "pics/.jpg",
+        image: "pics/jobapp.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
-
+    End30: {
+        text: `"Thats great babe..."`,
+        choices: [
+            [`"Yay!"`, "End305"],
+        ],
+        image: "pics/wife.webp",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+    End305: {
+        text: `"Well now that we have two incomes lets start a family"`,
+        choices: [
+            [`"ok"`, "End111"],
+        ],
+        image: "pics/wife.webp",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+    End111: {
+        text: `Jimmy Moggingson with his newfound job found happiness not only in his employement, but in his wife and and kid. And they lived happily ever after.`,
+        choices: [
+            [`Hell yeah`, "end1"],
+        ],
+        image: "pics/lf2.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
 
      // Ending2 //gym ending
@@ -1403,13 +1438,23 @@ function createBackToIntroButton() {
 function showStory() {
     const currentPage = history[history.length - 1];
 
-    
     storyContainer.innerHTML = "";
     buttonContainer.innerHTML = "";
     imageContainer.style.display = "none";
 
-    console.log("Current page:", currentPage);  // Debugging line to see the current page
-   
+    console.log("Current page:", currentPage);
+
+    // Show main menu button if we're on the intro page
+    if (currentPage === "intro") {
+    const returnBtn = document.createElement("button");
+    returnBtn.innerText = "Return to Main Menu";
+    returnBtn.className = "returnhome"; // <-- Add this line
+    returnBtn.style.marginTop = "10px";
+    returnBtn.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+    buttonContainer.appendChild(returnBtn);
+}
 
     if (currentPage === "end1") {
         state.valueRizz = 0;
@@ -1438,7 +1483,7 @@ function showStory() {
             });
             return;
         }
-    } else if (currentPage === "barbe1") {
+    } else if (currentPage === "") {
         console.log("Barbe1 reached");
 
         // Button to show depending on aura
