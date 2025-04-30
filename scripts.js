@@ -304,7 +304,7 @@ const story = {
         valueRizz: 10,
         valueAura: 50
     },
-    /* gangshytqte: {
+    gangshytqte: {
         text: "you win!.", //qtes 
         choices: [
             ["Ight", "aftermath"]
@@ -312,7 +312,7 @@ const story = {
         image: "pics/.jpg",
         valueRizz: 10,
         valueAura: 50
-    }, */
+    },
     aftermath: {
         text: "After winning the war, you indoctrinate all the Gamblers into your ranks of goons. Do you escap with sheer numbers or live out the rest of your days as top dog in this prison?",
         choices: [
@@ -979,21 +979,81 @@ CostcoM5: {
 },
 
 CostcoM6: {
-    text: ``,
+    text: `You must make a choice.`,
     choices: [
-    ["", ""],
+    ["Sacrifice your pride and embarass yourself by sprinting to the restroom", "CostcoM7"], ["Thug it out and stand there", "CostcoPoo"],
     ],
     image: "pics/.jpg",
-    valueRizz: -10000, // Set valueRizz here
-    valueAura: -10000 // Set valueAura here
+    valueRizz: 0, // Set valueRizz here
+    valueAura: 0 // Set valueAura here
 },
 
-Costco: {
+CostcoM7: {
+    text: `You embarass yourself by sprinting to the restroom with farts slipping out of your crack on the way`,
+    choices: [
+    ["Open one of the stall doors to be met with an unexpected guest!", "CostcoW"],
+    ],
+    image: "pics/.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoPoo: {
+    text: `You're standing there thuggin it out when you feel it. You know it's too late you you just gotta let it happen.`,
+    choices: [
+    ["...", "CostcoA"],
+    ],
+    image: "pics/JimmyCostco.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoA: {
+    text: `...`,
+    choices: [
+    ["...", "CostcoB"],
+    ],
+    image: "pics/JimmySoiled.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoB: {
     text: ``,
     choices: [
     ["", ""],
     ],
-    image: "pics/.jpg",
+    image: "pics/.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoW: {
+    text: `Waaahh I'm taking a poo!!!`,
+    choices: [
+    ["Close the door", "CostcoS"], ["Leave the door open and watch", "CostcoCreep"],
+    ],
+    image: "pics/Waaaa.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoS: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoCreep: {
+    text: ``,
+    choices: [
+    ["", ""],
+    ],
+    image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -1003,17 +1063,7 @@ Costco: {
     choices: [
     ["", ""],
     ],
-    image: "pics/.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
-
-Costco: {
-    text: ``,
-    choices: [
-    ["", ""],
-    ],
-    image: "pics/.jpg",
+    image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
