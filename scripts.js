@@ -507,7 +507,7 @@ const story = {
     barbdreads6: {
         text: `"Anytime."`,
         choices: [
-            ["Go to Costco", "Costco"],
+            ["Go to Costco", "Costco1"],
         ],
         image: "pics/john.jpg",
         valueRizz: 100, // Set valueRizz here
@@ -1438,23 +1438,20 @@ function createBackToIntroButton() {
 function showStory() {
     const currentPage = history[history.length - 1];
 
+    const returnToMainBtn = document.getElementById("return-to-main");
+if (currentPage === "intro") {
+    returnToMainBtn.style.display = "inline-block";
+} else {
+    returnToMainBtn.style.display = "none";
+}
+
     storyContainer.innerHTML = "";
     buttonContainer.innerHTML = "";
     imageContainer.style.display = "none";
 
     console.log("Current page:", currentPage);
 
-    // Show main menu button if we're on the intro page
-    if (currentPage === "intro") {
-    const returnBtn = document.createElement("button");
-    returnBtn.innerText = "Return to Main Menu";
-    returnBtn.className = "returnhome"; // <-- Add this line
-    returnBtn.style.marginTop = "10px";
-    returnBtn.addEventListener("click", () => {
-        window.location.href = "index.html";
-    });
-    buttonContainer.appendChild(returnBtn);
-}
+
 
     if (currentPage === "end1") {
         state.valueRizz = 0;
@@ -1539,3 +1536,12 @@ function updateScoreboard() {
 }
 
 console.log("Scoreboard element:", document.getElementById("scoreboard"));
+
+
+document.getElementById("return-to-main").addEventListener("click", function () {
+    // Add transition before navigating
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 500); // Match with CSS fade duration
+});
