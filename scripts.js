@@ -1019,9 +1019,9 @@ CostcoA: {
 },
 
 CostcoB: {
-    text: ``,
+    text: `You go back to your mentor... dookie stains visible for everyone to see...`,
     choices: [
-    ["", ""],
+    ["...", "CostcoC"],
     ],
     image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
@@ -1039,9 +1039,9 @@ CostcoW: {
 },
 
 CostcoS: {
-    text: ``,
+    text: `You promptly close the door and go to the next stall...`,
     choices: [
-    ["", ""],
+    ["Open the door to the stall, sit down, brace.", "CostcoG"],
     ],
     image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
@@ -1049,19 +1049,19 @@ CostcoS: {
 },
 
 CostcoCreep: {
-    text: ``,
+    text: `You intently stare at the man on the toilet`,
     choices: [
-    ["", ""],
+    ["hey bud-", "end1"],
     ],
     image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
 
-Costco: {
-    text: ``,
+CostcoC: {
+    text: `Your mentor looks at you with disgust... He says no words but - "Get a job you friggin loser..."`,
     choices: [
-    ["", ""],
+    ["ok... I guess im off...", "End1Start"],
     ],
     image: "pics/.png",
     valueRizz: 100, // Set valueRizz here
