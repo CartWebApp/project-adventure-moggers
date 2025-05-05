@@ -586,15 +586,15 @@ const story = {
         valueAura: 0 // Set valueAura here
     },
 
-Choice7: {
-    text: ``,
-    choices: [
-    ["He cries and runs away", "nil"], ["He calls the cops","nil"]   //Figure out how to make it so it chooses one option or another depending on Aura value
-    ],
-    image: "pics/john.jpg",
-    valueRizz: 100, // Set valueRizz here
-    valueAura: 100 // Set valueAura here
-},
+    Choice7: {
+        text: ``,
+        choices: [
+        ["He cries and runs away", "nil"], ["He calls the cops","nil"]   //Figure out how to make it so it chooses one option or another depending on Aura value
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 100, // Set valueRizz here
+        valueAura: 100 // Set valueAura here
+    },
 
     Choice8: {
         text: `He kicks your butt and mogs you`,
@@ -693,7 +693,7 @@ Costco1: {
     choices: [
     ["Refill your gas", "Costco2"], ["Go in and buy a chicken bake", "Costco3"]
     ],
-    image: "pics/.jpg",
+    image: "pics/costco.jpg",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -701,9 +701,9 @@ Costco1: {
 Costco2: {
     text: `You go to the gas pump, what are you gonna do?`,
     choices: [
-    ["Play with gasoline", "Costco4"], ["Light a cigar", "Costco5"], ["Pump gas", "Costco6"]
+    ["Play with gasoline", "Costco4"], ["Light a smartie", "Costco5"], ["Pump gas", "Costco6"]
     ],
-    image: "pics/.jpg",
+    image: "pics/gaspump.jpg",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -713,27 +713,27 @@ Costco3: {
     choices: [
     ["1 BIG BOOM!!!", "Costco7"], ["5 BIG BOOMS!!!", "Costco8"]
     ],
-    image: "pics/.jpg",
+    image: "pics/jimmbake.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
 
 Costco4: {
-    text: `As you're flinging gasoline around, an old man walking by happens to be lighting a cigar, which ignite all of the gasoline that you've been playing with.`,
+    text: `As you're flinging gasoline around, an old man walking by happens to be lighting a smartie, which ignite all of the gasoline that you've been playing with.`,
     choices: [
     ["You stand there aura farming nonchalantly as you're engulfed in the flames and explosions erupting around you.", "Costco9"],
     ],
-    image: "pics/.jpg",
+    image: "pics/gasfight.jpg",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
 
 Costco5: {
-    text: `An old man walking by notices your super epic and incredibly manly cigar, he begins to walk over. What are you gonna do?`,
+    text: `An old man walking by notices your super epic and incredibly manly smartie, he begins to walk over. What are you gonna do?`,
     choices: [
-    ["Smoke the cigar super nonchalantly and wait for the old man", "Costco10"],
+    ["Smoke the smartie super nonchalantly and wait for the old man", "Costco10"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimsmart.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -743,7 +743,7 @@ Costco6: {
     choices: [
     ["whoops :|", "Costco11"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimbreak.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -779,7 +779,7 @@ Costco9: {
 },
 
 Costco10: {
-    text: `The old man approached you and compliments you and your cigar and says you look super friggin epic with a cigar`,
+    text: `The old man approached you and compliments you and your smartie and says you look super friggin epic with a smartie`,
     choices: [
     ["Thank him", "Costco16"],
     ],
