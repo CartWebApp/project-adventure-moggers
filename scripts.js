@@ -763,7 +763,7 @@ Costco8: {
     choices: [
     ["Yippee!!!!! Thanks!", "Costco14"],
     ],
-    image: "pics/.jpg",
+    image: "pics/speedworker.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -773,7 +773,7 @@ Costco9: {
     choices: [
     ["look over and notice a man who stands out from the crowd looking at you... almost like he's proud of you.", "Costco15"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimfye.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -783,7 +783,7 @@ Costco10: {
     choices: [
     ["Thank him", "Costco16"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimtor.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -793,7 +793,7 @@ Costco11: {
     choices: [
     ["look over, notice the man, and greet him", "Costco17"],
     ],
-    image: "pics/.jpg",
+    image: "pics/mentsaw.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -803,7 +803,7 @@ Costco12: {
     choices: [
     ["Attempt to flee the scene", "Costco18"],
     ],
-    image: "pics/.jpg",
+    image: "pics/speded.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -813,7 +813,7 @@ Costco13: {
     choices: [
     ["Go to the barb", "barb1"], ["Go to the Gym", "Gym"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimrun.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -823,7 +823,7 @@ Costco14: {
     choices: [
     ["Await his arrival", "Costco19"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimtorcostco.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -833,7 +833,7 @@ Costco15: {
     choices: [
     ["Reach out and shake the mans hand", "Costco20"],
     ],
-    image: "pics/.jpg",
+    image: "pics/fyetor.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -843,7 +843,7 @@ Costco16: {
     choices: [
     ["Compliment the incredible grip of the handshake", "Costco21"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimshake.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -853,7 +853,7 @@ Costco17: {
     choices: [
     ["Gratefully accept his offer", "CostcoM"], //come back and change this to whichever option is the "meet your mentor" option
     ],
-    image: "pics/.jpg",
+    image: "pics/mentsaw.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -863,7 +863,7 @@ Costco18: {
     choices: [
     ["Comply", "barb2w"], ["Yell for help", "CostcoM"]
     ],
-    image: "pics/.jpg",
+    image: "pics/popo.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -873,7 +873,7 @@ Costco19: {
     choices: [
     ["Show him the Chicken Bake you won and offer him a taste", "Costco22"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimtorcostco.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -883,7 +883,7 @@ Costco20: {
     choices: [
     ["Compliment his grip strength", "Costco23"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimshake.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -893,7 +893,7 @@ Costco21: {
     choices: [
     ["Ask to learn his ways and get stronger from his teachings", "CostcoM"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimshake.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -903,7 +903,7 @@ Costco22: {
     choices: [
     ["Ask him to teach you his ways to get stronger", "CostcoM"],
     ],
-    image: "pics/.jpg",
+    image: "pics/baketor.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -913,7 +913,7 @@ Costco23: {
     choices: [
     ["Accept his offer gratefully accept his offer to train you", "CostcoM"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimshake.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -923,7 +923,7 @@ CostcoM: {
     choices: [
     ["Yahooo!!!", "CostcoM1"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimhap.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
