@@ -933,7 +933,7 @@ CostcoM1: {
     choices: [
     ["Ask him exactly what you have to do first to become a better version of yourself", "CostcoM2"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimhap.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -943,7 +943,7 @@ CostcoM2: {
     choices: [
     ["You cant sacrifice your pride and you decide to try the cookie", "CostcoM3"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimcourt.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -953,7 +953,7 @@ CostcoM3: {
     choices: [
     ["Purchase cookie", "CostcoM4"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimcookie.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -963,7 +963,7 @@ CostcoM4: {
     choices: [
     ["Eat it", "CostcoM5"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimcookie.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -973,7 +973,7 @@ CostcoM5: {
     choices: [
     ["It wasn't power... You now desperatly need to use the restroom", "CostcoM6"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimcookie.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -983,7 +983,7 @@ CostcoM6: {
     choices: [
     ["Sacrifice your pride and embarass yourself by sprinting to the restroom", "CostcoM7"], ["Thug it out and stand there", "CostcoPoo"],
     ],
-    image: "pics/.jpg",
+    image: "pics/jimmybeyond.png",
     valueRizz: 0, // Set valueRizz here
     valueAura: 0 // Set valueAura here
 },
@@ -993,7 +993,7 @@ CostcoM7: {
     choices: [
     ["Open one of the stall doors to be met with an unexpected guest!", "CostcoW"],
     ],
-    image: "pics/.png",
+    image: "pics/jimcry.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -1023,7 +1023,7 @@ CostcoB: {
     choices: [
     ["...", "CostcoC"],
     ],
-    image: "pics/.png",
+    image: "pics/poojim.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -1043,7 +1043,7 @@ CostcoS: {
     choices: [
     ["Open the door to the stall, sit down, brace.", "CostcoG"],
     ],
-    image: "pics/.png",
+    image: "pics/jimstall.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -1053,7 +1053,7 @@ CostcoCreep: {
     choices: [
     ["hey bud-", "end1"],
     ],
-    image: "pics/.png",
+    image: "pics/warioyum.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
@@ -1063,7 +1063,17 @@ CostcoC: {
     choices: [
     ["ok... I guess im off...", "End1Start"],
     ],
-    image: "pics/.png",
+    image: "pics/poojim.png",
+    valueRizz: 100, // Set valueRizz here
+    valueAura: 100 // Set valueAura here
+},
+
+CostcoG: {
+text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... it's over.`,
+    choices: [
+    ["Go back to your mentor", "CostcoB"],
+    ],
+    image: "pics/jimtoilet.png",
     valueRizz: 100, // Set valueRizz here
     valueAura: 100 // Set valueAura here
 },
