@@ -1061,7 +1061,7 @@ CostcoCreep: {
 CostcoC: {
     text: `Your mentor looks at you with disgust... He says no words but - "Get a job you friggin loser..."`,
     choices: [
-    ["ok... I guess im off...", "End1Start"],
+    ["ok... I guess im off...", "End3Start"],
     ],
     image: "pics/poojim.png",
     valueRizz: 100, // Set valueRizz here
@@ -1172,7 +1172,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
     End2Start: {
         text: `"You arrive at the interview."`,
         choices: [
-            ["", ""],
+        ["I have arrived at the interview! Time to go in!", ""],
         ],
         image: "pics/.jpg",
         valueRizz: 0, // Set valueRizz here
