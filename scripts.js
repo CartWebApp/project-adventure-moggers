@@ -1204,7 +1204,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
         ["Hey honey... I'm home...", "FiEnd2"],
         ],
-        image: "pics/.jpg",
+        image: "pics/lf.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1214,7 +1214,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
         ["I.. uhm.... kinda sorta.. didn't get ehe job...:(", "SiEnd2"],
         ],
-        image: "pics/.jpg",
+        image: "pics/wife.webp",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1224,17 +1224,17 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
         ["Wahhhh!!!", "SeEnd2"],
         ],
-        image: "pics/.jpg",
+        image: "pics/wife.webp",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
     SeEnd2: {
-        text: `Your wife then went on to live a happy life together with Captain Quark!`,
+        text: `Your wife then went on to live a happy life together with Captain Qwark!`,
         choices: [
         ["GG", "end1"],
         ],
-        image: "pics/.jpg",
+        image: "pics/divorce.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1276,7 +1276,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
             ["...", "FiEnd3"],
         ],
-        image: "pics/.jpg",
+        image: "pics/fight.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1286,7 +1286,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
             ["", ""],
         ],
-        image: "pics/.jpg",
+        image: "pics/fight.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1296,7 +1296,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
             ["This was a draw...", "SeEnd3"],
         ],
-        image: "pics/.jpg",
+        image: "pics/fight.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
@@ -1306,7 +1306,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
             ["GG", "end1"],
         ],
-        image: "pics/.jpg",
+        image: "pics/love.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
