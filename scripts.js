@@ -1105,7 +1105,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         choices: [
             [`"Lit. imma go home now"`, "End3"],
         ],
-        image: "pics/path.png",
+        image: "pics/ricard.png",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
