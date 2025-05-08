@@ -1172,17 +1172,117 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
     End2Start: {
         text: `"You arrive at the interview."`,
         choices: [
-        ["I have arrived at the interview! Time to go in!", ""],
+        ["I have arrived at the interview! Time to go in!", "TwEnd2"],
+        ],
+        image: "pics/maxresdefault.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    TwEnd2: {
+        text: `You want a job scrub? Then we gotta tussle first.`,
+        choices: [
+        ["Heh... Im that goat... you stand no chance!", "ThEnd2"],
+        ],
+        image: "pics/ricard.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    ThEnd2: {
+        text: `You- You've beaten me...`,
+        choices: [
+        ["Its joever", "FoEnd2"],
+        ],
+        image: "pics/ricard.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    FoEnd2: {
+        text: `You go back home to ur wife who's expecting good news`,
+        choices: [
+        ["Hey honey... I'm home...", "FiEnd2"],
         ],
         image: "pics/.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
-        },
+    },
+
+    FiEnd2: {
+        text: `"Well..?" your wife asks`,
+        choices: [
+        ["I.. uhm.... kinda sorta.. didn't get ehe job...:(", "SiEnd2"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    SiEnd2: {
+        text: `Get. Out.`,
+        choices: [
+        ["Wahhhh!!!", "SeEnd2"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    SeEnd2: {
+        text: `Your wife then went on to live a happy life together with Captain Quark!`,
+        choices: [
+        ["GG", "end1"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
     // Ending3 //costco ending
 
     End3Start: {
         text: `"You arrive at the interview."`,
+        choices: [
+            ["Wazzupppp!!!!", "TwEnd3"],
+        ],
+        image: "pics/maxresdefault.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    TwEnd3: {
+        text: `Hey there big man! you ready to EARN this job... >:)`,
+        choices: [
+            ["erm... *gulp* I guess man...", "ThEnd3"],
+        ],
+        image: "pics/ricard.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    ThEnd3: {
+        text: `RAHHHHHH!!!!!`,
+        choices: [
+            ["AHHHH!!!!!", "FoEnd3"],
+        ],
+        image: "pics/ricard.png",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    FoEnd3: {
+        text: `...`,
+        choices: [
+            ["...", "FiEnd3"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    FiEnd3: {
+        text: `The incredible battle dies down...`,
         choices: [
             ["", ""],
         ],
@@ -1191,7 +1291,25 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
         valueAura: 0 // Set valueAura here
     },
 
+    SiEnd3: {
+        text: `Good job man...`,
+        choices: [
+            ["This was a draw...", "SeEnd3"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 
+    SeEnd3: {
+        text: `You live happily ever after with your beautiful new husband!`,
+        choices: [
+            ["GG", "end1"],
+        ],
+        image: "pics/.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
 };
 
 function makeButton(btnText, choice) {
