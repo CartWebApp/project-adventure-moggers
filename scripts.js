@@ -726,40 +726,110 @@ const story = {
         valueAura: 0 // Set valueAura here
     },
 
-    gym4: {
-        text: ``,
+    gymM2: {
+        text: `You notice how incredibly buff and shredded he is. You ask him if he can help you become like him!`,
         choices: [
-        ["", ""]
+        ["Ask him what his routine is to look like that", "GymM3"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    gym4: {
-        text: ``,
+    gymM3: {
+        text: `He tells you that he can help you become like him, but first you need to prove yourself`,
         choices: [
-        ["", ""]
+        ["Ask him what it is you need to do?", "GymM4"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    gym4: {
-        text: ``,
+    gymM4: {
+        text: `hmm... lemme think... I GOT IT! You need to... workout... LEGS!!!`,
         choices: [
-        ["", ""]
+        ["ruh roh", "GymM5"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    gym4: {
-        text: ``,
+    gymM5: {
+        text: `You need to do legs today and once you finish, come back to me and I will help you become like me!`,
         choices: [
-        ["", ""]
+        ["erm.. ok dewd.", "GymM6"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gymM6: {
+        text: `You go over to the machines that you see the weirdos who do leg day at`,
+        choices: [
+        ["You pick out a machine", "GymM7"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gymM7: {
+        text: `You see it... towering over you... the LEGMASTER600!!!!!`,
+        choices: [
+        ["Approach the demon machine", "GymM8"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gymM8: {
+        text: `You get on the machine.. and do a GRUELING workout. You feel the pain. You need to perservere to pass your mentors trials!`,
+        choices: [
+        ["PUSHHH", "GymM9"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gymM9: {
+        text: `You complete the horrifying workout.`,
+        choices: [
+        ["Go back", "GymM0"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4M0: {
+        text: `"You approach you mentor and tell him you've completed you training and ask if he can help you now"`,
+        choices: [
+        ["pls", "GymM11"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4M11: {
+        text: `Sure... he tells you that he can help you`,
+        choices: [
+        ["Yay!!", "GymM12"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gymM12: {
+        text: `He tell you the secret of his gains is a balanced schedule, going to bed on time, getting up early, working out every day, and... GETTING. A. JOB!!!`,
+        choices: [
+        ["SIR YES SIR!", "End2Start"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
