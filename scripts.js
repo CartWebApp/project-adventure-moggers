@@ -579,7 +579,7 @@ const story = {
     Choice6: {
         text: `He becomes even more furious and punches you in the face`,
         choices: [
-            ["Cry", "intro"], ["Take it like a man and scan in", "Choice11"]
+            ["Cry", "end1"], ["Take it like a man and scan in", "Choice11"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -587,9 +587,9 @@ const story = {
     },
 
     Choice7: {
-        text: ``,
+        text: `You Mog him and he is upset and crying :(`,
         choices: [
-        ["He cries and runs away", "nil"], ["He calls the cops","nil"]   //Figure out how to make it so it chooses one option or another depending on Aura value
+        ["Leave", "gym2"], ["Stay there","gym3"]   //Figure out how to make it so it chooses one option or another depending on Aura value
         ],
         image: "pics/john.jpg",
         valueRizz: 100, // Set valueRizz here
@@ -599,7 +599,7 @@ const story = {
     Choice8: {
         text: `He kicks your butt and mogs you`,
         choices: [
-            ["Game Over. GG's!! :)", "intro"]
+            ["Game Over. GG's!! :)", "end1"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -649,37 +649,97 @@ const story = {
     Choice13: {
         text: `You finish working out and you notice a buff cosplaying dude working out.`,
         choices: [
-            ["Approach him...", "Choice14"]
+            ["Approach him...", "gymM"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    Choice14: {
-        text: ``,
+    gymM: {
+        text: `You have found your mentor!!!`,
         choices: [
-            ["", ""], ["", ""]
+            ["Yippee!!!", "GymM2"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    Choice15: {
-        text: ``,
+    workout: {
+        text: `Decide what machine you want to use for your workout.`,
         choices: [
-            ["", ""], ["", ""]
+            ["Gain Giver 7800", "Choice9"], ["Muscle Manifester 10004", "Choice10"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
         valueAura: 0 // Set valueAura here
     },
 
-    Choice16: {
+    gym2: {
+        text: `You leave and continue your workout with absolutely no remorse for the old man`,
+        choices: [
+            ["Go workout", "workout"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym3: {
+        text: `You Stay there and laugh at him for crying, the cops notice a commotion and come over`,
+        choices: [
+            ["Stay and wait for the cops", "GymMc"], ["Run away","pathchng"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    pathchng: {
         text: ``,
         choices: [
-            ["", ""], ["", ""]
+        ["Jail", ""] ["",""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4: {
+        text: ``,
+        choices: [
+        ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4: {
+        text: ``,
+        choices: [
+        ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4: {
+        text: ``,
+        choices: [
+        ["", ""]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    gym4: {
+        text: ``,
+        choices: [
+        ["", ""]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -1244,7 +1304,7 @@ text: `You battle against the toilet cookie still in mouth. VALIANTLY! until... 
     End3Start: {
         text: `"You arrive at the interview."`,
         choices: [
-            ["Wazzupppp!!!!", "TwEnd3"],
+            ["Wazzupppp!!!!", "TwEnd3 "],
         ],
         image: "pics/maxresdefault.jpg",
         valueRizz: 0, // Set valueRizz here
