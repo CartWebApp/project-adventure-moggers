@@ -696,10 +696,30 @@ const story = {
         valueAura: 0 // Set valueAura here
     },
 
-    pathchng: {
-        text: ``,
+    gymMc: {
+        text: `What all the ruckus?`,
         choices: [
-        ["Jail", ""] ["",""]
+        ["Nothin officer", "GymMc2"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },    
+
+    gymMc2: {
+        text: `"Oh ok" the cops leave and now you can get back to your workout`,
+        choices: [
+        ["Go back to your workout", "workout"]
+        ],
+        image: "pics/john.jpg",
+        valueRizz: 0, // Set valueRizz here
+        valueAura: 0 // Set valueAura here
+    },
+
+    pathchng: {
+        text: `Where do you go?`,
+        choices: [
+        ["Barb", "barb1"] ["Costco","Costco1"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
