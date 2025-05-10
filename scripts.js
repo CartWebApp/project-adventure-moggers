@@ -659,7 +659,7 @@ const story = {
     gymM: {
         text: `You have found your mentor!!!`,
         choices: [
-            ["Yippee!!!", "GymM2"]
+            ["Yippee!!!", "gymM2"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -729,7 +729,7 @@ const story = {
     gymM2: {
         text: `You notice how incredibly buff and shredded he is. You ask him if he can help you become like him!`,
         choices: [
-        ["Ask him what his routine is to look like that", "GymM3"]
+        ["Ask him what his routine is to look like that", "gymM3"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -739,7 +739,7 @@ const story = {
     gymM3: {
         text: `He tells you that he can help you become like him, but first you need to prove yourself`,
         choices: [
-        ["Ask him what it is you need to do?", "GymM4"]
+        ["Ask him what it is you need to do?", "gymM4"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -749,7 +749,7 @@ const story = {
     gymM4: {
         text: `hmm... lemme think... I GOT IT! You need to... workout... LEGS!!!`,
         choices: [
-        ["ruh roh", "GymM5"]
+        ["ruh roh", "gymM5"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -759,7 +759,7 @@ const story = {
     gymM5: {
         text: `You need to do legs today and once you finish, come back to me and I will help you become like me!`,
         choices: [
-        ["erm.. ok dewd.", "GymM6"]
+        ["erm.. ok dewd.", "gymM6"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -769,7 +769,7 @@ const story = {
     gymM6: {
         text: `You go over to the machines that you see the weirdos who do leg day at`,
         choices: [
-        ["You pick out a machine", "GymM7"]
+        ["You pick out a machine", "gymM7"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -779,7 +779,7 @@ const story = {
     gymM7: {
         text: `You see it... towering over you... the LEGMASTER600!!!!!`,
         choices: [
-        ["Approach the demon machine", "GymM8"]
+        ["Approach the demon machine", "gymM8"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -789,7 +789,7 @@ const story = {
     gymM8: {
         text: `You get on the machine.. and do a GRUELING workout. You feel the pain. You need to perservere to pass your mentors trials!`,
         choices: [
-        ["PUSHHH", "GymM9"]
+        ["PUSHHH", "gymM9"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -799,7 +799,7 @@ const story = {
     gymM9: {
         text: `You complete the horrifying workout.`,
         choices: [
-        ["Go back", "GymM0"]
+        ["Go back", "gymM0"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -809,7 +809,7 @@ const story = {
     gym4M0: {
         text: `"You approach you mentor and tell him you've completed you training and ask if he can help you now"`,
         choices: [
-        ["pls", "GymM11"]
+        ["pls", "gymM11"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -819,7 +819,7 @@ const story = {
     gym4M11: {
         text: `Sure... he tells you that he can help you`,
         choices: [
-        ["Yay!!", "GymM12"]
+        ["Yay!!", "gymM12"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
