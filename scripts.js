@@ -799,7 +799,7 @@ const story = {
     gymM9: {
         text: `You complete the horrifying workout.`,
         choices: [
-        ["Go back", "gymM0"]
+        ["Go back", "gym4M0"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
@@ -809,7 +809,7 @@ const story = {
     gym4M0: {
         text: `"You approach you mentor and tell him you've completed you training and ask if he can help you now"`,
         choices: [
-        ["pls", "gymM11"]
+        ["pls", "gym4M11"]
         ],
         image: "pics/john.jpg",
         valueRizz: 0, // Set valueRizz here
